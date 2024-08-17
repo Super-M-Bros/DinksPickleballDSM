@@ -1,27 +1,25 @@
 <header>
-  <nav>
-    <mat-grid-list cols="12" rowHeight="100px">
-      <mat-grid-tile [colspan]="3" style="margin-left: 20px;"><img src="combinedIconHorizontal.png"/></mat-grid-tile>
-      <mat-grid-tile [colspan]="7">
+  <nav class="grid grid-cols-12 p-5">
+      <div class="col-span-3" style="margin-left: 20px;"><img src="combinedIconHorizontal.png"/></div>
+      <div class="col-span-8 text-center">
         <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Home</a>
         <a class="nav-button" [routerLink]="['/memberships']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Rates/Memberships</a>
         <a class="nav-button" [routerLink]="['/leagues-tournaments']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Leagues/Tournaments</a>
         <a class="nav-button" [routerLink]="['/instruction']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Instruction</a>
         <a class="nav-button" [routerLink]="['/about']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">About us</a>
         <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">FAQ</a>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="2" [routerLink]="['/reserve']"><button mat-flat-button>Reserve court</button></mat-grid-tile>
-    </mat-grid-list>
+      </div>
+      <div class="col-span-1" [routerLink]="['/reserve']"><button class="rounded bg-slate-300">Reserve court</button></div>
   </nav>
 </header>
 
-<main style="margin: 0 100px;">
+<main class="mx-12">
   <router-outlet></router-outlet>
 </main>
 
 <footer>
   <div class="footer">
-    <a mat-icon-button href="https://www.facebook.com/groups/380792678025831/" target="_blank">
+    <a href="https://www.facebook.com/groups/380792678025831/" target="_blank">
       <img src="facebook.png">
     </a>
   </div>

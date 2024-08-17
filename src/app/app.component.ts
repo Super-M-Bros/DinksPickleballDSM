@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, RouterLinkActive, MatGridListModule, MatButtonModule],
+  imports: [RouterOutlet, RouterModule, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
