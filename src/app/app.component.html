@@ -1,3 +1,16 @@
-
+<nav>
+  <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile [colspan]="3" style="margin-left: 20px;"><img src="combinedIconHorizontal.png"/></mat-grid-tile>
+    <mat-grid-tile [colspan]="7">
+      <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Home</a>
+      <a class="nav-button" [routerLink]="['/memberships']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Memberships</a>
+      <a class="nav-button" [routerLink]="['/leagues-tournaments']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Leagues/Tournaments</a>
+      <a class="nav-button" [routerLink]="['/instruction']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Instruction</a>
+      <a class="nav-button" [routerLink]="['/about']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">About us</a>
+      <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">FAQ</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2"><button mat-flat-button>Reserve court</button></mat-grid-tile>
+  </mat-grid-list>
+</nav>
 
 <router-outlet></router-outlet>

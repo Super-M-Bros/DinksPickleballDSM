@@ -9,12 +9,13 @@ import { LeaguesAndTourneysComponent } from './leagues/leagues-and-tourneys.comp
 import { FaqComponent } from './faq/faq.component';
 
 export const routes: Routes = [
-  { path: '/', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'memberships', component: MembershipsComponent },
   { path: 'become-a-sponsor', component: BecomeASponsorComponent },
   { path: 'leagues-tournaments', component: LeaguesAndTourneysComponent },
   { path: 'instruction', component: InstructionComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'page-not-found', component: PageNotFoundComponent },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
 ];
