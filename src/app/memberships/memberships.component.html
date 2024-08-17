@@ -1,10 +1,87 @@
-<section>
+<main>
     <h1 class="text-5xl text-center mb-5">Rates & Memberships</h1>
-    <h2 class="text-4xl">Rates</h2>
-    <br>
-    <h2 class="text-4xl">Memberships <span style="font-weight: 100;">(Annual)</span></h2>
-    <p style="width: 50%; text-align: center; ">
-        Introductory Membership Rates | 12 month period will begin Jan 1 2024 with membership benefits beginning when
-        Dinks opens (est Oct 2023) $25 activation fee waived with memberships purchased before Grand Opening
-    </p>
-</section>
+    <!-- hours/rates -->
+    <h2 class="text-4xl mb-5">Hours/Rates</h2>
+    <article class="grid grid-cols-3 mb-10">
+        <div class="mx-1 border border-zinc-300 p-5 text-center">
+            <strong class="text-sky-600">Weekdays</strong>
+            <span style="display: flex; justify-content: center; ">
+                <p class="text-3xl">$16</p>
+                <p>/hour</p>
+            </span>
+            <p class="text-center mt-2">6AM-4PM</p>
+        </div>
+        <div class="mx-1 border border-zinc-300 p-5 text-center">
+            <strong class="text-sky-600">Weekdays</strong>
+            <span style="display: flex; justify-content: center; ">
+                <p class="text-3xl">$22</p>
+                <p>/hour</p>
+            </span>
+            <p class="text-center mt-2">4PM-12AM</p>
+        </div>
+        <div class="mx-1 border border-zinc-300 p-5 text-center">
+            <strong class="text-sky-600">Weekends (Sat/Sun)</strong>
+            <span style="display: flex; justify-content: center; ">
+                <p class="text-3xl">$28</p>
+                <p>/hour</p>
+            </span>
+            <p class="text-center mt-2">8AM-12AM</p>
+        </div>
+    </article>
+
+    <!-- memberships -->
+    <h2 class="text-4xl mb-5">Memberships <span style="font-weight: 100;">(Annual)</span></h2>
+    <section class="m-2 text-center border-2 border-sky-600 bg-sky-50 px-28 p-2">
+        <strong>Introductory Membership Rates</strong>
+        <p class="px-24">
+            12 month period will begin Jan 1 2024 with membership benefits beginning
+            when
+            Dinks opens (est Oct 2023) $25 activation fee waived with memberships purchased before Grand Opening
+        </p>
+    </section>
+    <article class="grid grid-cols-3">
+        <table class="border-separate border-spacing-2 col-span-2">
+            <thead>
+                <tr>
+                    <th class="border border-zinc-300 bg-zinc-300 p-5">Membership tier</th>
+                    <th class="border border-zinc-300 bg-zinc-300 p-5">Court booking</th>
+                    <th class="border border-zinc-300 bg-zinc-300 p-5">Price/session</th>
+                    <th class="border border-zinc-300 bg-zinc-300 p-5">Early tournament and special even access</th>
+                </tr>
+            </thead>
+            <!-- Limited -->
+            <tbody>
+                <tr>
+                    <td class="border-2 border-slate-300 p-5">Limited</td>
+                    <td class="border-2 border-slate-300 p-5">5 days in advance</td>
+                    <td class="border-2 border-slate-300 p-5">$9</td>
+                    <td class="border-2 border-slate-300 p-3 text-xl text-red-600">✕</td>
+                </tr>
+            </tbody>
+            <!-- Standard -->
+            <tbody>
+                <tr>
+                    <td class="border-2 border-amber-300 p-5">Standard</td>
+                    <td class="border-2 border-amber-300 p-5">2 weeks in advance</td>
+                    <td class="border-2 border-amber-300 p-5">$8</td>
+                    <td class="border-2 border-amber-300 p-3 text-xl text-green-600">✓</td>
+                </tr>
+            </tbody>
+            <!-- VIP -->
+            <tbody>
+                <tr>
+                    <td class="border-2 border-black p-5">VIP</td>
+                    <td class="border-2 border-black p-5">6 months in advance</td>
+                    <td class="border-2 border-black p-5">$7</td>
+                    <td class="border-2 border-black p-3 text-xl text-green-600">✓</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-span-1 m-2 border-4 border-zinc-300 p-24">
+            <span>
+                All membership tiers come with personalized door access upon signing up for open play or booking a
+                court
+            </span>
+        </div>
+    </article>
+</main>

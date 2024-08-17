@@ -24,7 +24,7 @@ export class FaqComponent {
 
   toggleShown(faqIndex: number){
     const index = this.shown.findIndex((val) => val === faqIndex);
-    if(index > -1) this.shown.splice(index);
+    if(index > -1) this.shown.splice(index, 1);
     else this.shown.push(faqIndex)
   }
 }
