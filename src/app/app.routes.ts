@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { InstructionComponent } from './instruction/instruction.component';
 import { LeaguesAndTourneysComponent } from './leagues/leagues-and-tourneys.component';
 import { FaqComponent } from './faq/faq.component';
+import { CourtscheduleComponent } from './courtschedule/courtschedule.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'leagues-tournaments', component: LeaguesAndTourneysComponent },
   { path: 'instruction', component: InstructionComponent },
   { path: 'faq', component: FaqComponent },
+  { path: 'reserve', component: CourtscheduleComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
