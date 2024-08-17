@@ -1,19 +1,29 @@
 <header>
-  <nav class="grid grid-cols-12 p-5">
-      <div class="col-span-3" style="margin-left: 20px;"><img src="combinedIconHorizontal.png"/></div>
-      <div class="col-span-8 text-center">
-        <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Home</a>
-        <a class="nav-button" [routerLink]="['/memberships']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Rates/Memberships</a>
-        <a class="nav-button" [routerLink]="['/leagues-tournaments']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Leagues/Tournaments</a>
-        <a class="nav-button" [routerLink]="['/instruction']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">Instruction</a>
-        <a class="nav-button" [routerLink]="['/about']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">About us</a>
-        <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page">FAQ</a>
-      </div>
-      <div class="col-span-1" [routerLink]="['/reserve']"><button class="rounded bg-slate-300">Reserve court</button></div>
+  <nav class="grid grid-cols-12 p-5 bg-white">
+    <div class="col-span-3"><img src="combinedIconHorizontal.png" /></div>
+    <div class="col-span-8 text-center">
+      <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button"
+        ariaCurrentWhenActive="page">Home</a>
+      <a class="nav-button" [routerLink]="['/memberships']" routerLinkActive="active-nav-button"
+        ariaCurrentWhenActive="page">Rates/Memberships</a>
+      <a class="nav-button" [routerLink]="['/leagues-tournaments']" routerLinkActive="active-nav-button"
+        ariaCurrentWhenActive="page">Leagues/Tournaments</a>
+      <a class="nav-button" [routerLink]="['/instruction']" routerLinkActive="active-nav-button"
+        ariaCurrentWhenActive="page">Instruction</a>
+      <a class="nav-button" [routerLink]="['/about']" routerLinkActive="active-nav-button"
+        ariaCurrentWhenActive="page">About us</a>
+      <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button"
+        ariaCurrentWhenActive="page">FAQ</a>
+    </div>
+    <div class="col-span-1" [routerLink]="['/reserve']">
+      <button class="rounded bg-dinks-red hover:bg-dinks-red-dark text-white text-md px-3 py-1">
+        Reserve court
+      </button>
+    </div>
   </nav>
 </header>
 
-<main class="mx-12">
+<main class="container mx-auto px-4 py-24 mb-10">
   <router-outlet></router-outlet>
 </main>
 
