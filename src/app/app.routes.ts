@@ -7,7 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { InstructionComponent } from './instruction/instruction.component';
 import { LeaguesAndTourneysComponent } from './leagues/leagues-and-tourneys.component';
 import { FaqComponent } from './faq/faq.component';
-import { CourtscheduleComponent } from './courtschedule/courtschedule.component';
+import { CourtscheduleComponent } from './court-schedule/court-schedule.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
