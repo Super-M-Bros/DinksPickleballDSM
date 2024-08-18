@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-dinks-blue {
-    background-color: #062e51;
+body {
+    color: white;
+    background-color: #111827;
 }
 
-.bg-dinks-red {
-    background-color: #c01422;
-}
-
-.hover\:bg-dinks-red-dark:hover {
-    background-color: #780e17;
+a {
+    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
 }

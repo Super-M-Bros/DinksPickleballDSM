@@ -1,9 +1,11 @@
 nav {
+    width: 100%;
     position: fixed;
+    background-color: #d4d4d4;
 }
 
 .nav-button {
-    color: #062e51;
+    color: black;
     font-size: 1.2rem;
     text-decoration: none;
 
@@ -23,7 +25,6 @@ nav {
 }
 
 .footer {
-    background-color: #062e51;
     width: 100%;
     position: fixed;
     bottom: 0;

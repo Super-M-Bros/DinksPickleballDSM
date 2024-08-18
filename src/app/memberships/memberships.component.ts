@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './memberships.component.scss'
 })
 export class MembershipsComponent {
-
+showModal = false;
+toggleModal = () => this.showModal = !this.showModal
 }

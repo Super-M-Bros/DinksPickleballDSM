@@ -1,7 +1,7 @@
 <header>
-  <nav class="grid grid-cols-12 p-5 bg-white">
-    <div class="col-span-3"><img src="combinedIconHorizontal.png" /></div>
-    <div class="col-span-8 text-center">
+  <nav class="grid grid-cols-12 p-5">
+    <div class="col-span-2"><a [routerLink]="['/home']"><img src="combinedIconHorizontal.png" /></a></div>
+    <div class="col-span-9 text-center pt-2">
       <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">Home</a>
       <a class="nav-button" [routerLink]="['/memberships']" routerLinkActive="active-nav-button"
@@ -15,7 +15,7 @@
       <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">FAQ</a>
     </div>
-    <div class="col-span-1" [routerLink]="['/reserve']">
+    <div class="col-span-1 pt-2" [routerLink]="['/reserve']">
       <button class="rounded bg-dinks-red hover:bg-dinks-red-dark text-white text-md px-3 py-1">
         Reserve court
       </button>

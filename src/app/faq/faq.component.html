@@ -1,5 +1,5 @@
 <main class="container px-96">
-    <h1 class="text-5xl text-center mb-5 mb-5">Frequently Asked Questions</h1>
+    <h1 class="text-5xl text-center my-6">Frequently Asked Questions</h1>
     <p class="text-center mb-10">
         Please reach us at
         <a href="mailto:info@dinkspickleballdsm.com">{{
@@ -9,7 +9,7 @@
     </p>
 
     @for(faq of faqs; track faq; let i = $index){
-    <article class="p-4 border-t last:border-b border-black hover:cursor-pointer" (click)="toggleShown(i)">
+    <article class="p-4 border-t last:border-b border-white hover:cursor-pointer" (click)="toggleShown(i)">
         <div>
             <strong class="p-2"> {{faq.question}} </strong>
         </div>
