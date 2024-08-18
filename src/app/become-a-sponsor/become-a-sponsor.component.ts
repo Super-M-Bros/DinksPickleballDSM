@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './become-a-sponsor.component.scss'
 })
 export class BecomeASponsorComponent {
-
+  sponsorLogos = [
+    "./sponsors/assuredPartners.jpg", "./sponsors/keyPotentialChiroptractic.jpg", "./sponsors/capitalDefenderAdvisors.jpg"
+  ]
 }

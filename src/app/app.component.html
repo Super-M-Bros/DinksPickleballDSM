@@ -15,8 +15,8 @@
       <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">FAQ</a>
     </div>
-    <div class="col-span-1 pt-2" [routerLink]="['/reserve']">
-      <button class="rounded bg-dinks-red hover:bg-dinks-red-dark text-white text-md px-3 py-1">
+    <div class="col-span-1 mt-1" [routerLink]="['/reserve']">
+      <button class="rounded bg-dinks-red hover:bg-dinks-red-dark text-white text-md px-5 py-2">
         Reserve court
       </button>
     </div>
@@ -28,9 +28,14 @@
 </main>
 
 <footer>
-  <div class="footer p-5">
+  <div class="footer p-5 grid grid-cols-2">
     <a href="https://www.facebook.com/groups/380792678025831/" target="_blank">
       <img src="facebook.png">
     </a>
+    <div class="flex justify-end" [routerLink]="['/become-a-sponsor']">
+      <button class="rounded bg-dinks-red hover:bg-dinks-red-dark w-64 p-3">
+        Become a sponsor!
+      </button>
+    </div>
   </div>
 </footer>

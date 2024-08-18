@@ -6,6 +6,7 @@ module.exports = {
             colors: {
                 'dinks-blue': '#062e51',
                 'dinks-red': '#c01422',
+                'dinks-red-dark': '#760e16',
                 'smoked-background': 'rgba(0, 0, 0, 0.5)',
             },
         },

@@ -1,5 +1,5 @@
 <main>
-    <h1 class="text-5xl text-center my-6">Rates & Memberships</h1>
+    <h1 class="text-5xl text-center my-16">Rates & Memberships</h1>
     <!-- Hours/rates -->
     <h2 class="text-4xl mb-5">Hours/Rates</h2>
     <!-- Open play -->
@@ -111,27 +111,28 @@
                 </tr>
             </tbody>
         </table>
-        <div class="rounded col-span-1 m-2 px-8 py-16 bg-dinks-blue">
-            <div class=" mb-2"><strong class="text-xl">All tiers include:</strong></div>
-            <p class="mb-8">
+        <div class="rounded col-span-1 m-2 px-8 pt-5 bg-dinks-blue">
+            <div class="mb-5"><strong class="text-xl">All tiers include:</strong></div>
+            <p class="mb-28">
                 Personalized door access upon signing up for open play or booking a
                 court
             </p>
-            <button class="rounded bg-dinks-red" style="width: 100%;" (click)="toggleModal()">Sign me up!</button>
+            <button class="rounded bg-dinks-red hover:bg-dinks-red-dark py-2" style="width: 100%;"
+                (click)="toggleModal()">Sign me up!</button>
         </div>
     </article>
 </main>
 
 @if (showModal) {
 <article>
-    <figure class="bg-smoked-background"
-        style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%;  transform: translate(-50%, -50%)"
+    <figure class="bg-smoked-background fixed"
+        style="width: 100vw; height: 100vh; top: 50%; left: 50%;  transform: translate(-50%, -50%)"
         (click)="toggleModal()">
     </figure>
-    <figure class="rounded bg-dinks-blue py-8 px-5"
-        style="position: fixed; top: 50%; left: 50%;  transform: translate(-50%, -50%); z-index: 1">
+    <figure class="rounded bg-dinks-blue py-8 px-5 fixed"
+        style="top: 50%; left: 50%;  transform: translate(-50%, -50%); z-index: 1">
         <!-- X button -->
-        <button (click)="toggleModal()" class="p-3 text-2xl" style="position: absolute; top: 0; right: 0; ">✕</button>
+        <button (click)="toggleModal()" class="p-3 text-2xl absolute" style="top: 0; right: 0; ">✕</button>
 
         <!-- Content -->
         <strong class="mb-5 ml-5 mr-20 text-3xl">How to sign up for a membership:</strong>
