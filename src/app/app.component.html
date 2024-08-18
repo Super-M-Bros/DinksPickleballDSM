@@ -4,8 +4,8 @@
     <div class="col-span-9 text-center pt-2">
       <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">Home</a>
-      <a class="nav-button" [routerLink]="['/memberships']" routerLinkActive="active-nav-button"
-        ariaCurrentWhenActive="page">Hours/Rates/Memberships</a>
+      <a class="nav-button" [routerLink]="['/rates-memberships']" routerLinkActive="active-nav-button"
+        ariaCurrentWhenActive="page">Rates/Memberships</a>
       <a class="nav-button" [routerLink]="['/leagues-tournaments']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">Leagues/Tournaments</a>
       <a class="nav-button" [routerLink]="['/instruction']" routerLinkActive="active-nav-button"
@@ -32,8 +32,8 @@
     <a href="https://www.facebook.com/groups/380792678025831/" target="_blank">
       <img src="facebook.png">
     </a>
-    <div class="flex justify-end" [routerLink]="['/become-a-sponsor']">
-      <button class="rounded bg-dinks-red hover:bg-dinks-red-dark w-64 p-3">
+    <div class="flex justify-end">
+      <button [routerLink]="['/become-a-sponsor']" class="rounded bg-dinks-red hover:bg-dinks-red-dark w-64 p-3">
         Become a sponsor!
       </button>
     </div>

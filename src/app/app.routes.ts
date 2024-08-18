@@ -12,7 +12,7 @@ import { CourtscheduleComponent } from './courtschedule/courtschedule.component'
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'memberships', component: MembershipsComponent },
+  { path: 'rates-memberships', component: MembershipsComponent },
   { path: 'become-a-sponsor', component: BecomeASponsorComponent },
   { path: 'leagues-tournaments', component: LeaguesAndTourneysComponent },
   { path: 'instruction', component: InstructionComponent },
