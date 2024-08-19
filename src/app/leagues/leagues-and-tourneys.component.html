@@ -4,8 +4,8 @@
     <!-- Leagues -->
     <section class="mb-10">
         <h2 class="text-4xl mb-5">Leagues</h2>
-        <figure class="flex flex-col rounded border-4 border-gray-800 w-full p-10">
-            <div class="flex justify-between mb-10">
+        <article class="flex flex-col rounded border-2 border-neutral-400 w-full p-10  shadow-xl">
+            <figure class="flex justify-between mb-10">
                 <span>
                     <h3 class="text-2xl"><strong>Spring League</strong></h3>
                     <div class="mt-1.5">April 15th - May 20th</div>
@@ -38,11 +38,11 @@
                     </div>
                 </div>
 
-                <div class="rounded flex border border-green-600 text-green-600 ml-5 p-1 px-5">
+                <div class="rounded flex border border-green-600 text-green-600 p-1 px-5">
                     <p class="text-5xl">$125</p>
                     <p class="text-xl mt-6 ml-1">/team</p>
                 </div>
-            </div>
+            </figure>
 
             <ul class="mb-5">
                 <li>Best 2 of 3</li>
@@ -50,21 +50,54 @@
                 <li>2 matches/week with 40 minute time limit</li>
             </ul>
 
-            <div class="flex justify-between">
+            <figure class="flex justify-between">
                 <div class="self-center"><strong>Dinks gift certificates awarded to top 3 teams</strong></div>
                 <div class="flex flex-col">
-                    <button class="rounded bg-dinks-red hover:bg-dinks-red-dark m-2 p-2">
+                    <a class="rounded bg-dinks-red hover:bg-dinks-red-dark m-2 p-2 text-center"
+                        href="https://teamsideline.com/sites/DINKSpickleball/current-programs">
                         Register
-                    </button>
+                    </a>
                     <p class="text-gray-400 text-sm">*Must be a dinks member to participate</p>
                 </div>
-            </div>
-        </figure>
+            </figure>
+        </article>
     </section>
 
     <!-- Tournaments -->
     <section>
-        <h2 class="text-4xl">Tournaments</h2>
+        <h2 class="text-4xl mb-5">Tournaments</h2>
+        <article class="grid grid-cols-3 gap-5">
+            @for(t of tournaments; track t){
+            @if(t.name){
+            <figure class="grid rounded border-2 content-between border-neutral-400 p-5 shadow-xl">
+                <div class="flex justify-between">
+                    <span>
+                        <h3 class="text-2xl"><strong>{{t.name}}</strong></h3>
+                        <div class="mt-1.5">{{t.dates}}</div>
+                    </span>
+                </div>
 
+                <div class="flex justify-start">
+                    <p class="my-10">{{t.description}}</p>
+                </div>
+
+
+                <div class="flex justify-between">
+                    @if(t.price.amount){
+                    <div class="rounded flex border border-green-600 text-green-600 py-1 px-3">
+                        <p class="text-2xl">${{t.price.amount}}</p>
+                        @if(t.price.per){<p class="mt-2 ml-1">/{{t.price.per}}</p>}
+                    </div>
+                    } @else {<div></div>}
+                    @if(t.registrationLink){
+                    <a class="rounded bg-dinks-red hover:bg-dinks-red-dark px-10 self-center p-2"
+                        [href]="t.registrationLink">
+                        Register
+                    </a>
+                    }
+                </div>
+            </figure>
+            }}
+        </article>
     </section>
 </article>

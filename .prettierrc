@@ -3,6 +3,6 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true,
-    "maxLineLength": 210,
+    "maxLineLength": 180,
     "bracketSameLine": true    
   }
