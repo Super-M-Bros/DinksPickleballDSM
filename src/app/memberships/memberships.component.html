@@ -1,143 +1,219 @@
-<main>
-    <h1 class="text-5xl text-center my-16">Rates & Memberships</h1>
-    <!-- Rates -->
-    <article class="bg-striped px-10 pt-5 pb-10 mb-10 shadow-xl">
-        <h2 class="text-4xl mb-5">Rates <em class="text-gray-400 text-3xl">(Membership required)</em></h2>
-        <!-- Open play -->
-        <section class="grid grid-cols-2 gap-x-5 text-center">
-            <h3 class="col-span-2 text-2xl text-center mb-5">Open play</h3>
-
-            <div class="rounded border-2 border-neutral-400 bg-gray-900 p-5">
-                <div class="mb-2"><strong class="text-sky-600">Monday-Friday</strong></div>
-                <div class="mb-2">
-                    <span class="flex justify-center">
-                        <p class="text-3xl">$7/$8/$9</p>
-                        <p class="mt-3 ml-1">/hour</p>
-                    </span>
-                    <p class="text-xl">determined by membership</p>
-                </div>
-                <p>8AM-11AM</p>
+<h1 class="text-5xl text-center my-16">Rates & Memberships</h1>
+<!-- Rates -->
+<article class="bg-striped px-10 pt-5 pb-10 mb-10 shadow-xl">
+    <h2 class="text-4xl mb-5 flex max-md:flex-col ">
+        <span>Rates</span>
+        <span class="italic text-gray-400 text-3xl max-md:text-lg">
+            (Membership required)
+        </span>
+    </h2>
+    <!-- Open play -->
+    <h3 class="text-2xl text-center mb-5">Open play</h3>
+    <section class="grid grid-cols-2 max-md:grid-cols-1 gap-5 text-center">
+        <div class="rounded border-2 border-neutral-400 bg-gray-900 p-5">
+            <div class="mb-2"><strong class="text-sky-600">Monday-Friday</strong></div>
+            <div class="mb-2">
+                <span class="flex justify-center">
+                    <p class="text-3xl">$7/$8/$9</p>
+                    <p class="mt-3 ml-1">/hour</p>
+                </span>
+                <p class="text-xl">determined by membership</p>
             </div>
-
-            <div class="rounded border-2 border-neutral-400 bg-gray-900 p-5">
-                <div class="mb-2"><strong class="text-sky-600">Friday, Saturday, Sunday</strong></div>
-                <div class="mb-2">
-                    <span class="flex justify-center">
-                        <p class="text-3xl">$7/$8/$9</p>
-                        <p class="mt-3 ml-1">/hour</p>
-                    </span>
-                    <p class="text-xl">determined by membership</p>
-                </div>
-                <p>8PM-11PM</p>
-            </div>
-        </section>
-
-        <!-- Court reservations -->
-        <section class="grid grid-cols-3 gap-x-5 text-center">
-            <h3 class="col-span-3 text-2xl my-5">Court reservations</h3>
-
-            <div class="rounded border-2 border-neutral-400 bg-gray-900 p-5">
-                <div class="mb-2"><strong class="text-sky-600">Monday-Friday</strong></div>
-                <div class="mb-2">
-                    <span class="flex justify-center">
-                        <p class="text-3xl">$16</p>
-                        <p class="mt-3 ml-1">/hour</p>
-                    </span>
-                </div>
-                <p>6AM-4PM</p>
-            </div>
-
-            <div class="rounded border-2 border-neutral-400 bg-gray-900 p-5">
-                <div class="mb-2"><strong class="text-sky-600">Monday-Friday (Evenings)</strong></div>
-                <div class="mb-2">
-                    <span class="flex justify-center">
-                        <p class="text-3xl">$22</p>
-                        <p class="mt-3 ml-1">/hour</p>
-                    </span>
-                </div>
-                <p>4PM-12AM</p>
-            </div>
-
-            <div class="rounded border-2 border-neutral-400 bg-gray-900 transparent-20 p-5">
-                <div class="mb-2"><strong class="text-sky-600">Saturday/Sunday</strong></div>
-                <div class="mb-2">
-                    <span class="flex justify-center">
-                        <p class="text-3xl">$28</p>
-                        <p class="mt-3 ml-1">/hour</p>
-                    </span>
-                </div>
-                <p>6AM-12AM</p>
-            </div>
-        </section>
-    </article>
-
-    <!-- Memberships -->
-    <article class="grid grid-cols-4 gap-y-5 mb-10">
-        <div></div>
-        <h2 class="col-span-4 text-4xl">Annual Memberships</h2>
-        <table class="col-span-3 border-separate border-spacing-2">
-            <!-- Headers -->
-            <thead>
-                <tr>
-                    <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">Membership tier</th>
-                    <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">Price/year</th>
-                    <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">Open play/hour</th>
-                    <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">Court booking</th>
-                    <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">
-                        Early tournament and special event access
-                    </th>
-                </tr>
-            </thead>
-            <!-- Limited -->
-            <tbody>
-                <tr>
-                    <td class="rounded border-2 border-amber-300 p-5 text-xl">Limited</td>
-                    <td class="rounded border-2 border-amber-300 p-5 text-xl">$45</td>
-                    <td class="rounded border-2 border-amber-300 p-5 text-xl">$9</td>
-                    <td class="rounded border-2 border-amber-300 p-5">5 days in advance</td>
-                    <td class="rounded border-2 border-amber-300 text-lg text-red-600 p-3">✘</td>
-                </tr>
-            </tbody>
-            <!-- Standard -->
-            <tbody>
-                <tr>
-                    <td class="rounded border-2 border-sky-500 p-5 text-xl">Standard</td>
-                    <td class="rounded border-2 border-sky-500 p-5 text-xl">$125</td>
-                    <td class="rounded border-2 border-sky-500 p-5 text-xl">$8</td>
-                    <td class="rounded border-2 border-sky-500 p-5">2 weeks in advance</td>
-                    <td class="rounded border-2 border-sky-500 text-xl text-green-600 p-3">✓</td>
-                </tr>
-            </tbody>
-            <!-- VIP -->
-            <tbody>
-                <tr>
-                    <td class="rounded border-2 border-violet-600 p-5 text-xl">VIP</td>
-                    <td class="rounded border-2 border-violet-600 p-5 text-xl">$195</td>
-                    <td class="rounded border-2 border-violet-600 p-5 text-xl">$7</td>
-                    <td class="rounded border-2 border-violet-600 p-5">6 months in advance</td>
-                    <td class="rounded border-2 border-violet-600 text-xl text-green-600 p-3">✓</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="rounded m-2 self-end">
-            <!-- <div class="absolute bg-dotted h-48 w-80 translate-x-12 translate-y-28 rotate-1" style="z-index: -10;"> -->
-            <div class="absolute bg-dotted h-48 w-80 translate-x-20 -translate-y-16" style="z-index: -10;">
-            </div>
-            <div class="flex-col justify-around bg-dinks-blue px-6 py-6  shadow-xl">
-                <div class="pb-7">
-                    <div class="mb-3"><strong class="text-xl">All tiers include:</strong></div>
-                    <p>
-                        Personalized door access upon signing up for open play or booking a
-                        court
-                    </p>
-                </div>
-                <button class="bg-dinks-red hover:bg-dinks-red-dark rounded py-2 mt-4 w-full" (click)="toggleModal()">
-                    Sign me up!
-                </button>
-            </div>
+            <p>8AM-11AM</p>
         </div>
-    </article>
-</main>
+
+        <div class="rounded border-2 border-neutral-400 bg-gray-900 p-5">
+            <div class="mb-2"><strong class="text-sky-600">Friday, Saturday, Sunday</strong></div>
+            <div class="mb-2">
+                <span class="flex justify-center">
+                    <p class="text-3xl">$7/$8/$9</p>
+                    <p class="mt-3 ml-1">/hour</p>
+                </span>
+                <p class="text-xl">determined by membership</p>
+            </div>
+            <p>8PM-11PM</p>
+        </div>
+    </section>
+
+    <!-- Court reservations desktop -->
+    <h3 class="text-2xl text-center mb-5 mt-10">Court reservations</h3>
+    <section class="grid grid-cols-3 max-md:grid-cols-1 gap-5 text-center">
+
+        <div class="rounded border-2 border-neutral-400 bg-gray-900 p-5">
+            <div class="mb-2"><strong class="text-sky-600">Monday-Friday</strong></div>
+            <div class="mb-2">
+                <span class="flex justify-center">
+                    <p class="text-3xl">$16</p>
+                    <p class="mt-3 ml-1">/hour</p>
+                </span>
+            </div>
+            <p>6AM-4PM</p>
+        </div>
+
+        <div class="rounded border-2 border-neutral-400 bg-gray-900 p-5">
+            <div class="mb-2"><strong class="text-sky-600">Monday-Friday (Evenings)</strong></div>
+            <div class="mb-2">
+                <span class="flex justify-center">
+                    <p class="text-3xl">$22</p>
+                    <p class="mt-3 ml-1">/hour</p>
+                </span>
+            </div>
+            <p>4PM-12AM</p>
+        </div>
+
+        <div class="rounded border-2 border-neutral-400 bg-gray-900 transparent-20 p-5">
+            <div class="mb-2"><strong class="text-sky-600">Saturday/Sunday</strong></div>
+            <div class="mb-2">
+                <span class="flex justify-center">
+                    <p class="text-3xl">$28</p>
+                    <p class="mt-3 ml-1">/hour</p>
+                </span>
+            </div>
+            <p>6AM-12AM</p>
+        </div>
+    </section>
+</article>
+
+
+<!-- Memberships -->
+<h2 class="text-4xl mb-5">Annual Memberships</h2>
+<article class="grid grid-cols-4 gap-y-5 mb-10 max-md:hidden">
+    <table class="col-span-3 border-separate border-spacing-2">
+        <!-- Headers -->
+        <thead>
+            <tr>
+                <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">Membership tier</th>
+                <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">Price/year</th>
+                <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">Open play/hour</th>
+                <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">Court booking</th>
+                <th class="rounded border border-gray-600 bg-gray-800 text-white p-5">
+                    Early tournament and special event access
+                </th>
+            </tr>
+        </thead>
+        <!-- Limited -->
+        <tbody>
+            <tr>
+                <td class="rounded border-2 border-amber-300 p-5 text-xl">Limited</td>
+                <td class="rounded border-2 border-amber-300 p-5 text-xl">$45</td>
+                <td class="rounded border-2 border-amber-300 p-5 text-xl">$9</td>
+                <td class="rounded border-2 border-amber-300 p-5">5 days in advance</td>
+                <td class="rounded border-2 border-amber-300 text-lg text-red-600 p-3">✘</td>
+            </tr>
+        </tbody>
+        <!-- Standard -->
+        <tbody>
+            <tr>
+                <td class="rounded border-2 border-sky-500 p-5 text-xl">Standard</td>
+                <td class="rounded border-2 border-sky-500 p-5 text-xl">$125</td>
+                <td class="rounded border-2 border-sky-500 p-5 text-xl">$8</td>
+                <td class="rounded border-2 border-sky-500 p-5">2 weeks in advance</td>
+                <td class="rounded border-2 border-sky-500 text-xl text-green-600 p-3">✓</td>
+            </tr>
+        </tbody>
+        <!-- VIP -->
+        <tbody>
+            <tr>
+                <td class="rounded border-2 border-violet-600 p-5 text-xl">VIP</td>
+                <td class="rounded border-2 border-violet-600 p-5 text-xl">$195</td>
+                <td class="rounded border-2 border-violet-600 p-5 text-xl">$7</td>
+                <td class="rounded border-2 border-violet-600 p-5">6 months in advance</td>
+                <td class="rounded border-2 border-violet-600 text-xl text-green-600 p-3">✓</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="rounded m-2 self-end">
+        <div class="absolute bg-dotted h-48 w-80 translate-x-20 -translate-y-16" style="z-index: -10;">
+        </div>
+        <div class="flex-col justify-around bg-dinks-blue px-6 py-6  shadow-xl">
+            <div class="pb-7">
+                <div class="mb-3"><strong class="text-xl">All tiers include:</strong></div>
+                <p>
+                    Personalized door access upon signing up for open play or booking a
+                    court
+                </p>
+            </div>
+            <button class="bg-dinks-red hover:bg-dinks-red-dark rounded py-2 mt-4 w-full" (click)="toggleModal()">
+                Sign me up!
+            </button>
+        </div>
+    </div>
+</article>
+
+<!-- Memberships mobile -->
+<article class="grid grid-rows-3 gap-5 mb-10 md:hidden">
+    <!-- Limited -->
+    <div class="rounded border-2 border-amber-300 p-5 shadow-xl">
+        <div class="mb-2 flex justify-between">
+            <strong class="text-amber-300 text-3xl">Limited</strong>
+            <span class="text-xl"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+        </div>
+        <ul class="list-disc ml-5 mb-3 hidden">
+            <li>Ability to book 5 days in advance</li>
+            <li>Weekday Open Play $9/session</li>
+        </ul>
+        <div class="flex justify-between">
+            <span class="flex">
+                <p class="text-2xl">$45</p>
+                <p class="text-sm mt-3 ml-1">/year</p>
+            </span>
+            <button class="bg-dinks-red hover:bg-dinks-red-dark rounded px-3 mt-1" (click)="toggleModal()">
+                Sign me up!
+            </button>
+        </div>
+    </div>
+    <!-- Standard -->
+    <div class="rounded border-2 border-sky-500 p-5 shadow-xl">
+        <div class="mb-2 flex justify-between">
+            <strong class="text-sky-500 text-3xl">Standard</strong>
+            <span class="text-xl"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+        </div>
+        <ul class="list-disc ml-5 mb-3 hidden">
+            <li>Ability to book 2 weeks in advance</li>
+            <li>Weekday Open Play $8/session</li>
+            <li>Early access to tournaments & special events</li>
+        </ul>
+        <div class="flex justify-between">
+            <span class="flex">
+                <p class="text-2xl">$125</p>
+                <p class="text-sm mt-3 ml-1">/year</p>
+            </span>
+            <button class="bg-dinks-red hover:bg-dinks-red-dark rounded px-3 mt-1" (click)="toggleModal()">
+                Sign me up!
+            </button>
+        </div>
+    </div>
+    <!-- VIP -->
+    <div class="rounded border-2 border-violet-600 p-5 shadow-xl">
+        <div class="mb-2 flex justify-between">
+            <strong class="text-violet-600 text-3xl">VIP</strong>
+            <span class="text-xl"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+        </div>
+        <ul class="list-disc ml-5 mb-3 hidden">
+            <li>Ability to book 6 months in advance</li>
+            <li>Weekday Open Play $7/session</li>
+            <li>Early access to tournaments & special events</li>
+        </ul>
+        <div class="flex justify-between">
+            <span class="flex">
+                <p class="text-2xl">$195</p>
+                <p class="text-sm mt-3 ml-1">/year</p>
+            </span>
+            <button class="bg-dinks-red hover:bg-dinks-red-dark rounded px-3 mt-1" (click)="toggleModal()">
+                Sign me up!
+            </button>
+        </div>
+    </div>
+</article>
 
 @if (showModal) {
 <article>
