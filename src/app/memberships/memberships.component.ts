@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
-  selector: 'app-memberships',
-  standalone: true,
-  imports: [],
-  templateUrl: './memberships.component.html',
-  styleUrl: './memberships.component.scss'
+    selector: 'app-memberships',
+    standalone: true,
+    imports: [],
+    templateUrl: './memberships.component.html',
+    styleUrl: './memberships.component.scss',
 })
 export class MembershipsComponent {
-showModal = false;
-toggleModal = () => this.showModal = !this.showModal
+    showModal = false
+    limited = false
+    standard = false
+    vip = false
+
+    toggleModal = () => (this.showModal = !this.showModal)
+    toggleLimited = () => (this.limited = !this.limited)
+    toggleStandard = () => (this.standard = !this.standard)
+    toggleVIP = () => (this.vip = !this.vip)
 }
