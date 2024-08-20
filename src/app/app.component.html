@@ -1,7 +1,7 @@
 <header>
   <!-- desktop -->
   <nav class="grid grid-cols-12 p-5 max-md:hidden">
-    <div class="col-span-2"><a [routerLink]="['/home']"><img src="combinedIconHorizontal.png" /></a></div>
+    <div class="col-span-2 m-2"><a [routerLink]="['/home']"><img src="combinedIconHorizontal.png" /></a></div>
     <div class="col-span-9 text-center pt-2">
       <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">Home</a>
@@ -33,18 +33,18 @@
     <div class="col-span-5 w-64"><a [routerLink]="['/home']"><img src="combinedIconHorizontal.png" /></a></div>
     @if(menu){
     <div class="flex flex-col -translate-x-3 mt-5 w-screen">
-      <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button"
-        ariaCurrentWhenActive="page">Home</a>
+      <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page"
+        (click)="toggleMenu()">Home</a>
       <a class="nav-button" [routerLink]="['/rates-memberships']" routerLinkActive="active-nav-button"
-        ariaCurrentWhenActive="page">Rates/Memberships</a>
+        ariaCurrentWhenActive="page" (click)="toggleMenu()">Rates/Memberships</a>
       <a class="nav-button" [routerLink]="['/leagues-tournaments']" routerLinkActive="active-nav-button"
-        ariaCurrentWhenActive="page">Leagues/Tournaments</a>
+        ariaCurrentWhenActive="page" (click)="toggleMenu()">Leagues/Tournaments</a>
       <a class="nav-button" [routerLink]="['/instruction']" routerLinkActive="active-nav-button"
-        ariaCurrentWhenActive="page">Instruction</a>
-      <a class="nav-button" [routerLink]="['/about']" routerLinkActive="active-nav-button"
-        ariaCurrentWhenActive="page">About us</a>
-      <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button"
-        ariaCurrentWhenActive="page">FAQ</a>
+        ariaCurrentWhenActive="page" (click)="toggleMenu()">Instruction</a>
+      <a class="nav-button" [routerLink]="['/about']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page"
+        (click)="toggleMenu()">About us</a>
+      <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button" ariaCurrentWhenActive="page"
+        (click)="toggleMenu()">FAQ</a>
     </div>
     }
     <div class="col-span-1 mt-1 max-md:hidden" [routerLink]="['/reserve']">
@@ -55,25 +55,23 @@
   </nav>
 </header>
 
-<main class="container mx-auto px-4 pt-16">
+<main class="container mx-auto px-4 pt-16 max-md:mb-52">
   <router-outlet></router-outlet>
 </main>
 
-<div class="fixed bottom-0 p-4 w-screen md:hidden" [routerLink]="['/reserve']">
+<div class="md:hidden fixed bottom-20 p-4 w-screen z-10" [routerLink]="['/reserve']">
   <button class="rounded bg-dinks-red hover:bg-dinks-red-dark w-full text-white text-md px-5 py-2">
     Reserve court
   </button>
 </div>
 
-<footer>
-  <div class="footer p-5 grid grid-cols-2 bg-zinc-900">
+<footer class="fixed bottom-0 w-screen">
+  <div class="p-5 flex justify-between items-center bg-zinc-900">
     <a href="https://www.facebook.com/groups/380792678025831/" target="_blank">
       <img src="facebook.png">
     </a>
-    <div class="flex justify-end">
-      <button [routerLink]="['/become-a-sponsor']" class="rounded bg-dinks-red hover:bg-dinks-red-dark w-64 p-3">
-        Become a sponsor!
-      </button>
-    </div>
+    <a [routerLink]="['/become-a-sponsor']">
+      Become a sponsor!
+    </a>
   </div>
 </footer>

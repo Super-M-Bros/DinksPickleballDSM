@@ -1,5 +1,5 @@
-<main class="container px-96">
-    <h1 class="text-5xl text-center my-16">Frequently Asked Questions</h1>
+<h1 class="text-5xl text-center my-16">Frequently Asked Questions</h1>
+<article class="md:mx-72">
     <p class="text-center mb-10">
         Please reach us at
         <a href="mailto:info@dinkspickleballdsm.com">{{
@@ -9,9 +9,15 @@
     </p>
 
     @for(faq of faqs; track faq; let i = $index){
-    <article class="p-4 border-t last:border-b border-white hover:cursor-pointer" (click)="toggleShown(i)">
-        <div>
+    <section class="p-4 border-t last:border-b last:mb-5 border-white hover:cursor-pointer" (click)="toggleShown(i)">
+        <div class="flex justify-between">
             <strong class="p-2"> {{faq.question}} </strong>
+            <button class="ml-5" [class.rotate-180]="shown.includes(i)">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e8eaed">
+                    <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                </svg>
+            </button>
         </div>
         @if(shown.includes(i)){
         @for(answer of faq.answers; track answer; ){
@@ -29,6 +35,6 @@
         }
         }
         }
-    </article>
+    </section>
     }
-</main>
+</article>
