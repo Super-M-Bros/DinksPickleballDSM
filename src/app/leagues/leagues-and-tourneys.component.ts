@@ -8,14 +8,22 @@ import { Component } from '@angular/core'
     styleUrl: './leagues-and-tourneys.component.scss',
 })
 export class LeaguesAndTourneysComponent {
-    tournaments = [
-        // {
-        //     name: '',
-        //     dates: '',
-        //     description: '',
-        //     price: { amount: '', per: '' },
-        //     registrationLink: '',
-        // },
+    leagues: League[] = [
+        {
+            name: 'Sprint League',
+            dates: 'April 15th - May 20th',
+            price: { amount: '125', per: 'team' },
+            details: [
+                'Best 2 of 3',
+                '1st and 2nd game to 11 points, 3rd game to 7 points',
+                '2 matches/week with 40 minute time limit',
+            ],
+            winnings: 'Dinks gift certificates awarded to top 3 teams',
+            registrationLink:
+                'https://teamsideline.com/sites/DINKSpickleball/current-programs',
+        },
+    ]
+    tournaments: Tournament[] = [
         {
             name: 'Inaugural Crazy 8 Tournament Hosted by Kiwanis WDM',
             dates: '2/10',
@@ -47,14 +55,12 @@ export class LeaguesAndTourneysComponent {
             name: 'Rotary Pickleball for a Cause Crazy 8 & Tournament',
             dates: '4/12-4/13',
             description: 'Crazy 8 Friday Evening and Full Tournament Saturday',
-            price: { amount: '', per: '' },
             registrationLink: 'https://pickleballbrackets.com/pts.aspx',
         },
         {
             name: 'Iowa Senior Games',
             dates: '6/5-6/6',
             description: '',
-            price: { amount: '', per: '' },
             registrationLink:
                 'https://www.iowaseniorgames.org/event/summer-iowa-senior-games/pickleball/',
         },
@@ -63,7 +69,7 @@ export class LeaguesAndTourneysComponent {
             dates: '6/21-6/23',
             description:
                 'These Tournaments are being held across all 50 states to determine the best Amateur players in each state.  Winning this tournament will give you free berth into the United Pickleball Championships in Dallas!',
-            price: { amount: '', per: '' },
+
             registrationLink:
                 'https://pickleballbrackets.com/pts.aspx://pickleballbrackets.com/pts.aspx',
         },
@@ -72,7 +78,7 @@ export class LeaguesAndTourneysComponent {
             dates: '7/26-7/28',
             description:
                 'CT Tournaments are fantastically run throughout the midwest and they are bringing the experience to Dinks with >$2K cash purse.',
-            price: { amount: '', per: '' },
+
             registrationLink:
                 'https://pickleballbrackets.com/pts.aspx://pickleballbrackets.com/pts.aspx',
         },
@@ -81,7 +87,7 @@ export class LeaguesAndTourneysComponent {
             dates: '9/13-9/15',
             description:
                 'Gold Medalists will be invited to the 2025 WPT Amateur Inviatational which will pit the best players in the country against eachother for their share of the $175K Cash Purse!',
-            price: { amount: '', per: '' },
+
             registrationLink:
                 'https://pickleballbrackets.com/ptd.aspx?eid=2306b652-5c6a-4795-916b-3e15b8da7189',
         },
@@ -90,8 +96,23 @@ export class LeaguesAndTourneysComponent {
             dates: '10/25-10/26',
             description:
                 'Back again!  Team style event with a fun event Friday night and Main play all day Saturday!  Players will be selected to teams of 4 to compete against teams of similar skill.  Sign up as an individual to be placed on a team. Proceeds will go to UnityPoint John Stoddard Cancer Center in Des Moines.',
-            price: { amount: '', per: '' },
             registrationLink: '',
         },
     ]
+}
+
+interface League {
+    name: string
+    dates?: string
+    price?: { amount: string; per?: string }
+    details?: string[]
+    winnings?: string
+    registrationLink?: string
+}
+interface Tournament {
+    name: string
+    dates?: string
+    description?: string
+    price?: { amount: string; per?: string }
+    registrationLink?: string
 }

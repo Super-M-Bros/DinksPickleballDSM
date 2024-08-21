@@ -1,103 +1,84 @@
-<article>
-    <h1 class="text-5xl text-center my-16">Leagues & Tournaments</h1>
+<h1 class="text-5xl text-center my-16">Leagues & Tournaments</h1>
 
-    <!-- Leagues -->
-    <section class="mb-10">
-        <h2 class="text-4xl mb-5">Leagues</h2>
-        <article class="flex flex-col rounded border-2 border-neutral-400 w-full p-10  shadow-xl">
-            <figure class="flex justify-between mb-10">
+<!-- Leagues -->
+<section class="mb-10">
+    <h2 class="text-4xl mb-5 max-xl:text-center">Leagues</h2>
+    @for(l of leagues; track l){
+
+    <figure class="flex flex-col rounded border-2 border-neutral-400 w-full p-10 shadow-xl">
+        <div class="flex justify-between mb-10">
+            <span>
+                <h3 class="text-2xl"><strong>{{l.name}}</strong></h3>
+                <div class="mt-1.5">{{l.dates}}</div>
+            </span>
+            @if(l.price?.amount){
+            <div class="rounded flex border border-green-600 text-green-600 p-1 px-5 max-lg:hidden">
+                <p class="text-5xl">${{l.price?.amount}}</p>
+                @if(l.price?.per){<p class="text-xl mt-6 ml-1">/{{l.price?.per}}</p>}
+            </div>
+            }
+        </div>
+
+        <ul class="xl:mb-5 max-xl:mb-10 ml-5 list-disc">
+            @for(d of l.details; track d){
+            <li>{{d}}</li>
+            }
+        </ul>
+
+        <div class="flex max-xl:flex-col max-xl:mb-5 justify-between">
+            <div class="self-center max-xl:mb-5"><strong>{{l.winnings}}</strong></div>
+            <div class="flex flex-col">
+                <a class="rounded bg-dinks-red hover:bg-dinks-red-dark m-2 p-2 text-center" [href]="l.registrationLink">
+                    Register
+                </a>
+                <p class="text-gray-400 text-sm self-end pr-2">*Must be a dinks member to participate</p>
+            </div>
+        </div>
+
+        <div>@if(l.price?.amount){
+            <div class="rounded flex border border-green-600 text-green-600 p-1 px-5 justify-center lg:hidden">
+                <p class="text-5xl">${{l.price?.amount}}</p>
+                @if(l.price?.per){<p class="text-xl mt-6 ml-1">/{{l.price?.per}}</p>}
+            </div>
+            }
+        </div>
+    </figure>
+    }
+</section>
+
+<!-- Tournaments -->
+<section>
+    <h2 class="text-4xl mb-5 max-xl:text-center">Tournaments</h2>
+    <figure class="grid xl:grid-cols-3 max-xl:grid-cols-1 gap-5">
+        @for(t of tournaments; track t){
+        <div class="grid rounded border-2 content-between border-neutral-400 p-5 shadow-xl">
+            <div class="flex justify-between">
                 <span>
-                    <h3 class="text-2xl"><strong>Spring League</strong></h3>
-                    <div class="mt-1.5">April 15th - May 20th</div>
+                    <h3 class="text-2xl"><strong>{{t.name}}</strong></h3>
+                    <div class="mt-1.5">{{t.dates}}</div>
                 </span>
+            </div>
 
-                <div class="flex text-center">
-                    <div class="rounded border border-dinks-red ml-5 p-1 px-5">
-                        <strong>1st week</strong>
-                        <p>League play</p>
-                    </div>
-                    <div class="rounded border border-dinks-red ml-5 p-1 px-5">
-                        <strong>2nd week</strong>
-                        <p>League play</p>
-                    </div>
-                    <div class="rounded border border-dinks-red ml-5 p-1 px-5">
-                        <strong>3rd week</strong>
-                        <p>League play</p>
-                    </div>
-                    <div class="rounded border border-dinks-red ml-5 p-1 px-5">
-                        <strong>4th week</strong>
-                        <p>League play</p>
-                    </div>
-                    <div class="rounded border border-dinks-red ml-5 p-1 px-5">
-                        <strong>5th week</strong>
-                        <p>League play</p>
-                    </div>
-                    <div class="rounded bg-dinks-blue ml-5 p-1 px-5">
-                        <strong>Last week</strong>
-                        <p>Tournament</p>
-                    </div>
+            <div class="flex justify-start">
+                <p class="my-10">{{t.description}}</p>
+            </div>
+
+
+            <div class="flex justify-between">
+                @if(t.price?.amount){
+                <div class="rounded flex border border-green-600 text-green-600 py-1 px-3">
+                    <p class="text-2xl">${{t.price?.amount}}</p>
+                    @if(t.price?.per){<p class="mt-2 ml-1">/{{t.price?.per}}</p>}
                 </div>
-
-                <div class="rounded flex border border-green-600 text-green-600 p-1 px-5">
-                    <p class="text-5xl">$125</p>
-                    <p class="text-xl mt-6 ml-1">/team</p>
-                </div>
-            </figure>
-
-            <ul class="mb-5">
-                <li>Best 2 of 3</li>
-                <li>1st and 2nd game to 11 points, 3rd game to 7 points</li>
-                <li>2 matches/week with 40 minute time limit</li>
-            </ul>
-
-            <figure class="flex justify-between">
-                <div class="self-center"><strong>Dinks gift certificates awarded to top 3 teams</strong></div>
-                <div class="flex flex-col">
-                    <a class="rounded bg-dinks-red hover:bg-dinks-red-dark m-2 p-2 text-center"
-                        href="https://teamsideline.com/sites/DINKSpickleball/current-programs">
-                        Register
-                    </a>
-                    <p class="text-gray-400 text-sm">*Must be a dinks member to participate</p>
-                </div>
-            </figure>
-        </article>
-    </section>
-
-    <!-- Tournaments -->
-    <section>
-        <h2 class="text-4xl mb-5">Tournaments</h2>
-        <article class="grid grid-cols-3 gap-5">
-            @for(t of tournaments; track t){
-            @if(t.name){
-            <figure class="grid rounded border-2 content-between border-neutral-400 p-5 shadow-xl">
-                <div class="flex justify-between">
-                    <span>
-                        <h3 class="text-2xl"><strong>{{t.name}}</strong></h3>
-                        <div class="mt-1.5">{{t.dates}}</div>
-                    </span>
-                </div>
-
-                <div class="flex justify-start">
-                    <p class="my-10">{{t.description}}</p>
-                </div>
-
-
-                <div class="flex justify-between">
-                    @if(t.price.amount){
-                    <div class="rounded flex border border-green-600 text-green-600 py-1 px-3">
-                        <p class="text-2xl">${{t.price.amount}}</p>
-                        @if(t.price.per){<p class="mt-2 ml-1">/{{t.price.per}}</p>}
-                    </div>
-                    } @else {<div></div>}
-                    @if(t.registrationLink){
-                    <a class="rounded bg-dinks-red hover:bg-dinks-red-dark px-10 self-center p-2"
-                        [href]="t.registrationLink">
-                        Register
-                    </a>
-                    }
-                </div>
-            </figure>
-            }}
-        </article>
-    </section>
-</article>
+                } @else {<div></div>}
+                @if(t.registrationLink){
+                <a class="rounded bg-dinks-red hover:bg-dinks-red-dark px-10 self-center p-2"
+                    [href]="t.registrationLink">
+                    Register
+                </a>
+                }
+            </div>
+        </div>
+        }
+    </figure>
+</section>
