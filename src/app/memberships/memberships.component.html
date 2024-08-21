@@ -76,12 +76,11 @@
 
 
 <!-- Memberships -->
-<!-- <h2 class="text-4xl mb-5">Annual Memberships</h2> -->
-<h2 class="text-4xl mb-5 flex max-md:flex-col md:text-center">
+<h2 class="text-4xl mb-5 flex max-xl:flex-col max-xl:text-center">
     <span>Annual&nbsp;</span>
     <span>Memberships</span>
 </h2>
-<article class="grid grid-cols-4 gap-y-5 mb-10 max-md:hidden">
+<article class="grid grid-cols-4 gap-y-5 mb-10 max-lg:hidden">
     <table class="col-span-3 border-separate border-spacing-2">
         <!-- Headers -->
         <thead>
@@ -126,17 +125,14 @@
             </tr>
         </tbody>
     </table>
-    <div class="rounded m-2 self-end">
-        <div class="absolute bg-dotted h-48 w-80 translate-x-20 -translate-y-16" style="z-index: -10;">
-        </div>
-        <div class="flex-col justify-around bg-dinks-blue px-6 py-6  shadow-xl">
-            <div class="pb-7">
-                <div class="mb-3"><strong class="text-xl">All tiers include:</strong></div>
-                <p>
-                    Personalized door access upon signing up for open play or booking a
-                    court
-                </p>
-            </div>
+    <div class="relative m-2">
+        <div class="relative bg-dotted w-2/3 h-2/3 translate-x-1/2" style="z-index: -10;"></div>
+        <div class="absolute rounded bg-dinks-blue p-6 w-5/6 shadow-xl bottom-0">
+            <div class="mb-3"><strong class="text-xl">All tiers include:</strong></div>
+            <p class="pb-7">
+                Personalized door access upon signing up for open play or booking a
+                court
+            </p>
             <button class="bg-dinks-red hover:bg-dinks-red-dark rounded py-2 mt-4 w-full" (click)="toggleModal()">
                 Sign me up!
             </button>
@@ -145,7 +141,7 @@
 </article>
 
 <!-- Memberships mobile -->
-<article class="mb-10 md:hidden">
+<article class="mb-10 lg:hidden">
     <!-- Limited -->
     <div class="rounded border-2 border-amber-300 p-5 mb-5 shadow-xl">
         <div class="mb-2 flex justify-between" (click)="toggleLimited()">
@@ -166,7 +162,7 @@
     </div>
 
     <!-- Standard -->
-    <div class="rounded border-2 border-sky-500 mb-5 p-5 shadow-xl">
+    <div class="rounded border-2 border-sky-500 p-5 mb-5 shadow-xl">
         <div class="mb-2 flex justify-between" (click)="toggleStandard()">
             <strong class="text-sky-500 text-3xl">Standard</strong>
             <svg [class.rotate-180]="standard" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
@@ -186,7 +182,7 @@
     </div>
 
     <!-- VIP -->
-    <div class="rounded border-2 border-violet-600 mb-10 p-5 shadow-xl">
+    <div class="rounded border-2 border-violet-600 p-5 mb-10 shadow-xl">
         <div class="mb-2 flex justify-between" (click)="toggleVIP()">
             <strong class="text-violet-600 text-3xl">VIP</strong>
             <svg [class.rotate-180]="vip" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
@@ -204,10 +200,10 @@
             <p class="text-sm mt-3 ml-1">/year</p>
         </span>
     </div>
-    <div class=" rounded m-4">
-        <div class="absolute bg-dotted h-64 w-11/12 -translate-x-4 -translate-y-5 rotate-3" style="z-index: -10;">
+    <div class="relative rounded m-4 py-4">
+        <div class="absolute bg-dotted h-full w-full rotate-3" style="z-index: -10;">
         </div>
-        <div class="justify-around bg-dinks-blue px-6 py-6 shadow-xl">
+        <div class="bg-dinks-blue p-6 shadow-xl w-full mx-auto mt-8">
             <div class="pb-7">
                 <div class="mb-3"><strong class="text-xl">All tiers include:</strong></div>
                 <p>
