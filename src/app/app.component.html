@@ -1,8 +1,8 @@
 <header>
   <!-- desktop -->
-  <nav class="grid grid-cols-12 p-5 max-xl:hidden">
-    <div class="col-span-2 m-2"><a [routerLink]="['/home']"><img src="combinedIconHorizontal.png" /></a></div>
-    <div class="col-span-9 text-center pt-2">
+  <nav class="flex justify-between items-center p-5 max-xl:hidden">
+    <div><a [routerLink]="['/home']"><img src="combinedIconHorizontal.png" /></a></div>
+    <div>
       <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">Home</a>
       <a class="nav-button" [routerLink]="['/rates-memberships']" routerLinkActive="active-nav-button"
@@ -16,7 +16,7 @@
       <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">FAQ</a>
     </div>
-    <div class="col-span-1 mt-1" [routerLink]="['/reserve']">
+    <div [routerLink]="['/reserve']">
       <button class="rounded bg-dinks-red hover:bg-dinks-red-dark text-white text-md px-5 py-2">
         Reserve court
       </button>
@@ -52,7 +52,7 @@
   </nav>
 </header>
 
-<main class="container m-auto px-4 pt-16 mb-52">
+<main class="container mx-auto px-4 mb-52" style="padding-top: 5.55rem">
   <router-outlet></router-outlet>
 </main>
 

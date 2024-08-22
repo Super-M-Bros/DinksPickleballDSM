@@ -126,7 +126,7 @@
         </tbody>
     </table>
     <div class="relative m-2">
-        <div class="relative bg-dotted w-2/3 h-2/3 translate-x-1/2" style="z-index: -10;"></div>
+        <div class="relative bg-dotted w-2/3 h-2/3 translate-x-1/2  z-[-1]"></div>
         <div class="absolute rounded bg-dinks-blue p-6 w-5/6 shadow-xl bottom-0">
             <div class="mb-3"><strong class="text-xl">All tiers include:</strong></div>
             <p class="pb-7">
@@ -201,8 +201,7 @@
         </span>
     </div>
     <div class="relative rounded m-4 py-4">
-        <div class="absolute bg-dotted h-full w-full rotate-3" style="z-index: -10;">
-        </div>
+        <div class="absolute bg-dotted h-full w-full rotate-3 z-[-1]"></div>
         <div class="bg-dinks-blue p-6 shadow-xl w-full mx-auto mt-8">
             <div class="pb-7">
                 <div class="mb-3"><strong class="text-xl">All tiers include:</strong></div>
@@ -220,20 +219,21 @@
 
 @if (showModal) {
 <article>
-    <figure class="bg-smoked-background fixed w-screen h-screen top-1/2 left-1/2"
-        style=" transform: translate(-50%, -50%)" (click)="toggleModal()">
+    <figure class="bg-smoked-background fixed w-screen h-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        (click)="toggleModal()">
     </figure>
-    <figure class="bg-dinks-blue rounded fixed py-8 px-5 max-md:w-11/12"
-        style="top: 50%; left: 50%;  transform: translate(-50%, -50%); z-index: 1">
+    <figure
+        class="bg-dinks-blue rounded fixed py-8 px-5 max-md:w-11/12 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <!-- X button -->
-        <button (click)="toggleModal()" class="text-2xl absolute p-3" style="top: 0; right: 0; ">✕</button>
+        <button (click)="toggleModal()" class="text-2xl absolute p-3 top-0 right-1">✕</button>
 
         <!-- Content -->
-        <div class="mb-5 ml-5"><strong class="text-3xl">How to sign up for a membership:</strong></div>
+        <div class="m-5"><strong class="text-3xl">How to sign up for a membership:</strong>
+        </div>
         <div class="grid md:grid-cols-2 max-md:grid-cols-1 gap-8 p-5">
             <div class="rounded border-2 border-gray-600 p-5">
                 <strong class="text-lg">Download the app!</strong>
-                <ul class="list-decimal mt-4 ml-5 ">
+                <ul class="list-decimal ml-5">
                     <li>Download Court Reserve app</li>
                     <li>Create an account</li>
                     <li>Search and select Dinks Pickleball from drop down menu</li>
@@ -242,7 +242,7 @@
             </div>
             <div class="rounded border-2 border-gray-600 p-5">
                 <strong class="text-lg">Use the website!</strong>
-                <ul class="list-decimal mt-4 ml-5 ">
+                <ul class="list-decimal ml-5">
                     <li>Visit <a href="https://www.courtreserve.com" target="_blank">www.courtreserve.com</a></li>
                     <li>Select "Login" > "Don't have an Account?" > "I'm a player"</li>
                     <li>Search and select Dinks Pickleball</li>
