@@ -2,6 +2,9 @@
 module.exports = {
     content: ['./src/**/*.{html,js}'],
     theme: {
+        fontFamily: {
+            header: ['Bebas Neue', 'sans-serif'],
+        },
         extend: {
             colors: {
                 'dinks-blue': '#062e51',
