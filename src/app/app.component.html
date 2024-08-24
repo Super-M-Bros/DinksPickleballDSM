@@ -1,7 +1,7 @@
 <header>
   <!-- desktop -->
   <nav class="flex justify-between items-center p-5 max-xl:hidden">
-    <div><a [routerLink]="['/home']"><img src="combinedIconHorizontal.png" /></a></div>
+    <div><a [routerLink]="['/home']"><img src="logos/combinedIconHorizontal.png" /></a></div>
     <div>
       <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">Home</a>
@@ -11,8 +11,6 @@
         ariaCurrentWhenActive="page">Leagues/Tournaments</a>
       <a class="nav-button" [routerLink]="['/instruction']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">Instruction</a>
-      <a class="nav-button" [routerLink]="['/about']" routerLinkActive="active-nav-button"
-        ariaCurrentWhenActive="page">About us</a>
       <a class="nav-button" [routerLink]="['/faq']" routerLinkActive="active-nav-button"
         ariaCurrentWhenActive="page">FAQ</a>
     </div>
@@ -31,7 +29,7 @@
       </svg>
     </button>
     <button [routerLink]="['/home']">
-      <img class="h-8" src="combinedIconHorizontal.png" />
+      <img class="h-8" src="logos/combinedIconHorizontal.png" />
     </button>
     @if(menu){
     <div class="flex flex-col mt-5 -ml-3 self-start">
@@ -63,13 +61,15 @@
       class="rounded bg-dinks-red hover:bg-dinks-red-dark w-full text-white text-md mb-5 px-5 py-2 xl:hidden">
       Reserve court
     </button>
-    <div class="flex justify-between items-center">
+    <figure class="flex justify-between items-center">
       <a href="https://www.facebook.com/groups/380792678025831/" target="_blank">
         <img src="facebook.png">
       </a>
-      <a [routerLink]="['/become-a-sponsor']">
-        Become a sponsor!
-      </a>
-    </div>
+      <div>
+        <a class="mr-5" [routerLink]="['/about']">About the owners</a>
+        <a class="mr-5" [routerLink]="['/destinations']">Dinks Destinations</a>
+        <a [routerLink]="['/become-a-sponsor']">Become a sponsor!</a>
+      </div>
+    </figure>
   </div>
 </footer>
