@@ -2,22 +2,47 @@
     <div class="absolute inset-0 bg-black opacity-75"></div>
     <div class="relative z-10 flex items-center justify-center h-full">
         <div class="text-center text-white">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 mt-48 sm:mt-28">Welcome to Your New Pickleball Venue</h1>
-            <p class="text-lg md:text-2xl mb-8">The largest dedicated indoor pickleball venue in central Iowa.</p>
+            <h1 class="inline-block text-4xl md:text-7xl mb-10 sm:mt-20 mx-16 sm:mx-8"
+                style="font-family: 'futura-pt', sans-serif; font-weight: 500; font-style: normal; border-bottom-width: 3px; border-bottom-color: rgb(9, 136, 67);">
+                The best place to play in DSM</h1>
 
-            <div class="mt-10 flex items-center justify-center gap-x-6">
+            <div class="hidden md:flex justify-center items-center md:mx-10 lg:mx-40 mb-10">
+                <span class="mr-2 text-right"
+                    style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal; font-size: 12rem; line-height: 1;">13</span>
+                <p class="text-lg md:text-5xl text-left ml-2"
+                    style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal; line-height: 1.4 !important;">
+                    professional grade courts<br>open all year round
+                </p>
+            </div>
+
+            <div class="md:hidden block text-center mb-10">
+                <p class="text-9xl" style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal;">
+                    <span class="text-shadow-lg-green">13</span>
+                </p>
+                <p class="text-2xl"
+                    style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal; line-height: 1.4 !important;">
+                    professional grade courts<br>open all year round
+                </p>
+            </div>
+
+            <p class="text-lg md:text-2xl"
+                style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal; line-height: 1.4 !important;">
+                6 am - 12 am | 7 days a week
+            </p>
+
+            <div class="mt-6">
                 <a routerLink="/reserve"
-                    class="no-underline rounded-md px-3 py-3 text-medium font-medium bg-red-500 hover:bg-red-700 text-white hover:text-grey-200 visited:text-white hover:cursor-pointer">Reserve
-                    a court</a>
-                <a (click)="scrollToAbout()"
+                    class="no-underline rounded-md px-3 py-1 text-3xl bg-red-500 hover:bg-red-700 text-white hover:text-grey-200 visited:text-white hover:cursor-pointer"
+                    style="font-family: 'futura-pt', sans-serif; font-weight: 500; font-style: normal">JOIN TODAY</a>
+                <!-- <a (click)="scrollToAbout()"
                     class="text-sm font-semibold leading-6 text-white hover:text-gray-200 visited:text-white hover:cursor-pointer">Learn
                     more
-                    <span aria-hidden="true">→</span></a>
+                    <span aria-hidden="true">→</span></a> -->
             </div>
 
             <!-- <h1 class="text-4xl md:text-7xl font-bold mb-4 mt-28">13</h1>
             <p class="text-lg md:text-2xl mb-8">Dedicated professional grade pickle courts, open all year round.</p> -->
-            <div class="py-5 mt-14">
+            <!-- <div class="py-5 mt-14">
                 <div class="mx-auto max-w-7xl px-6 lg:px-8">
                     <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
                         <div class="mx-auto flex max-w-xs flex-col gap-y-4 bg-gray-200 p-6 rounded-lg shadow-lg">
@@ -42,7 +67,7 @@
                         </div>
                     </dl>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

@@ -13,7 +13,34 @@ module.exports = {
                 'dinks-green': '#225534',
                 'smoked-background': 'rgba(0, 0, 0, 0.5)',
             },
+            textShadow: {
+                'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                'md': '3px 3px 6px rgba(0, 0, 0, 0.5)',
+                'lg': '4px 4px 8px rgba(0, 0, 0, 0.5)',
+            }
         },
     },
-    plugins: [],
+    plugins: [
+        function ({ addUtilities }) {
+            const newUtilities = {
+                '.text-shadow': {
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                },
+                '.text-shadow-md': {
+                    textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5)',
+                },
+                '.text-shadow-lg': {
+                    textShadow: '4px 4px 8px rgba(0, 0, 0, 0.5)',
+                },
+                '.text-shadow-none': {
+                    textShadow: 'none',
+                },
+                '.text-shadow-lg-green': {
+                    textShadow: '3px 3px 0 rgba(9, 136, 67, 1)',
+                },
+            }
+
+            addUtilities(newUtilities, ['responsive', 'hover'])
+        }
+    ],
 }

@@ -47,7 +47,8 @@
   <nav id="nav" class="bg-gray-200">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-20 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile Menu Icon -->
+        <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
           <!-- Mobile menu button-->
           <button type="button"
             class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -66,19 +67,21 @@
             </svg>
           </button>
         </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+        <!-- Dinks Logo-->
+        <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
           <div class="flex flex-shrink-0 items-center">
             <a routerLink="home" class="hover:cursor-pointer hover:opacity-90">
-              <img class="hidden sm:block h-10 w-auto" src="logos/combinedIconHorizontal.png" alt="Your Company">
-              <img class="sm:hidden h-10 w-auto" src="logos/logoIcon.png" alt="Your Company" (click)="toggleMenu(true)">
+              <img class="hidden lg:block h-7 xl:h-10 w-auto" src="logos/combinedIconHorizontal.png" alt="Your Company">
+              <img class="lg:hidden h-10 w-auto" src="logos/logoIcon.png" alt="Your Company" (click)="toggleMenu(true)">
             </a>
           </div>
         </div>
+
+        <!-- Desktop Nav -->
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <div class="flex">
-            <div class="hidden sm:block space-x-2">
-
-
+            <div class="hidden lg:block space-x-2">
               <a routerLink="home"
                 class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900  hover:border-blue-900 hover:text-white visited:text-gray-900"
                 routerLinkActive="bg-blue-700 border-blue-700 active-link">Home</a>
@@ -113,7 +116,7 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div #mobileMenu class="sm:hidden" id="mobile-menu" [hidden]="mobileMenuHidden" (click)="toggleMenu()">
+    <div #mobileMenu class="lg:hidden" id="mobile-menu" [hidden]="mobileMenuHidden" (click)="toggleMenu()">
       <div class="space-y-1 px-2 pb-3 pt-2">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a routerLink="home"
@@ -197,7 +200,7 @@
 </main>
 
 
-<footer class="fixed bottom-0 w-screen">
+<!-- <footer class="fixed bottom-0 w-screen">
   <div class="p-5 flex flex-col bg-zinc-900">
     <button [routerLink]="['/reserve']"
       class="rounded bg-dinks-red hover:bg-dinks-red-dark w-full text-white text-md mb-5 px-5 py-2 xl:hidden">
@@ -214,4 +217,4 @@
       </div>
     </figure>
   </div>
-</footer>
+</footer> -->
