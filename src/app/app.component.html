@@ -1,6 +1,150 @@
-<header>
+<header class="fixed top-o w-full z-50">
+  <div #banner id="banner"
+    class="hidden md:flex relative isolate items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+    <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+      aria-hidden="true">
+      <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+        style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)">
+      </div>
+    </div>
+    <div class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+      aria-hidden="true">
+      <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+        style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)">
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <p class="text-sm leading-6 text-gray-900">
+        <strong class="font-semibold">Des Moines Pickleball Team Classic</strong><svg viewBox="0 0 2 2"
+          class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
+          <circle cx="1" cy="1" r="1" />
+        </svg>
+        <strong class="font-semibold">Charity Event</strong><svg viewBox="0 0 2 2"
+          class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
+          <circle cx="1" cy="1" r="1" />
+        </svg><a
+          class="no-underline text-gray-900 hover:text-gray-950 visited:text-gray-900 hover:cursor-pointer">Proceeds
+          will go to
+          UnityPoint John Stoddard
+          Cancer Center in
+          Des Moines &rarr;</a>
+      </p>
+      <!-- <a href="#"
+        class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white visited:text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Register
+        now <span aria-hidden="true"></span></a> -->
+    </div>
+    <div class="flex flex-1 justify-end">
+      <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]"
+        (click)="banner.style.display = 'none'">
+        <span class="sr-only">Dismiss</span>
+        <svg class="h-5 w-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path
+            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <nav id="nav" class="bg-gray-200">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-20 items-center justify-between">
+        <!-- Mobile Menu Icon -->
+        <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false" (click)="toggleMenu()">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+
+            <svg *ngIf="mobileMenuHidden" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+
+            <svg *ngIf="!mobileMenuHidden" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dinks Logo-->
+        <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <a routerLink="home" class="hover:cursor-pointer hover:opacity-90">
+              <img class="hidden lg:block h-7 xl:h-10 w-auto" src="logos/combinedIconHorizontal.png" alt="Your Company">
+              <img class="lg:hidden h-10 w-auto" src="logos/logoIcon.png" alt="Your Company" (click)="toggleMenu(true)">
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="flex">
+            <div class="hidden lg:block space-x-2">
+              <a routerLink="home"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900  hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">Home</a>
+              <a routerLink="rates-memberships"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900  hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">Rates</a>
+              <a routerLink="leagues-tournaments"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">Leagues/Tournaments</a>
+              <a routerLink="instruction"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">Instruction</a>
+              <a routerLink="about"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">About
+                Us</a>
+
+              <a href="https://maps.app.goo.gl/pfU4YHvtoYF1QonE9" target="_blank"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-gray-500 visited:text-gray-900">
+                <i class="material-icons align-middle inline-block mr-1">place</i>
+                <!-- 3800 Merle Hay Rd Suite 1000 -->
+              </a>
+
+              <a routerLink="reserve"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium text-red-500 border-2 border-red-500 hover:border-red-700 hover:text-red-700 visited:text-red-700"
+                routerLinkActive=" border-red-700 bg-red-700 active-link">Reserve
+                a court</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div #mobileMenu class="lg:hidden" id="mobile-menu" [hidden]="mobileMenuHidden" (click)="toggleMenu()">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a routerLink="home"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-790000 active-link">Home</a>
+        <a routerLink="rates-memberships"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-900 active-link">Rates</a>
+        <a routerLink="leagues-tournaments"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-900 active-link">Leagues/Tournaments</a>
+        <a routerLink="instruction"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-900 active-link">Instruction</a>
+        <a routerLink="about"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-900 active-link">About</a>
+        <a routerLink="reserve"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-red-500 border-2 border-red-500 hover:border-red-700 hover:text-red-700 visited:text-red-700"
+          routerLinkActive="border-red-700 bg-red-700 active-link">Reserve
+          a court</a>
+      </div>
+    </div>
+  </nav>
+
+
   <!-- desktop -->
-  <nav class="flex justify-between items-center p-5 max-xl:hidden">
+  <!-- <nav class="bg-gray-300 flex justify-between items-center p-5 max-xl:hidden">
     <div><a [routerLink]="['/home']"><img src="logos/combinedIconHorizontal.png" /></a></div>
     <div>
       <a class="nav-button" [routerLink]="['/home']" routerLinkActive="active-nav-button"
@@ -19,10 +163,10 @@
         Reserve court
       </button>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- mobile -->
-  <nav class="flex flex-col justify-start items-center p-5 xl:hidden">
+  <!-- <nav class="flex flex-col justify-start items-center p-5 xl:hidden">
     <button class="absolute top-6 left-5 text-dinks-blue" (click)="toggleMenu()">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
@@ -47,15 +191,16 @@
         (click)="toggleMenu()">FAQ</a>
     </div>
     }
-  </nav>
+  </nav> -->
 </header>
 
-<main class="container mx-auto px-4 mb-52" style="padding-top: 5.55rem">
+<main class="mb-52">
+  <h1>&nbsp;</h1>
   <router-outlet></router-outlet>
 </main>
 
 
-<footer class="fixed bottom-0 w-screen">
+<!-- <footer class="fixed bottom-0 w-screen">
   <div class="p-5 flex flex-col bg-zinc-900">
     <button [routerLink]="['/reserve']"
       class="rounded bg-dinks-red hover:bg-dinks-red-dark w-full text-white text-md mb-5 px-5 py-2 xl:hidden">
@@ -72,4 +217,4 @@
       </div>
     </figure>
   </div>
-</footer>
+</footer> -->
