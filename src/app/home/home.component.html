@@ -1,37 +1,103 @@
-<article class="m-10">
-    <p>
-        We are a local, family owned, dedicated indoor pickleball venue. In fact, we are the largest dedicated
-        pickleball venueindoors or outdoors in central Iowa! Our facility is over 70,000 sq feet and will have 13
-        dedicated courts, dedicated practice/warm up areas and plenty of room to socialize with your friends before and
-        after play.
-    </p>
-    <br>
-    <p>
-        We can't wait for you to join us whether that be for social, competitive or open play... or maybe a league,
-        tournament or fun event!
-    </p>
-    <br>
-    <p>
-        New to pickleball? No problem, we have professional instructors that will get you up to speed during our Intro
-        to Pickleball clinics or help take your game to the next level!
-    </p>
-</article>
+<section class="relative bg-cover bg-center h-screen" style="background-image: url('facility.jpg');">
+    <div class="absolute inset-0 bg-black opacity-80"></div>
+    <div class="relative z-10 flex items-center justify-center h-full">
+        <div class="text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 mt-20">Welcome to Your New Pickleball Venue</h1>
+            <p class="text-lg md:text-2xl mb-8">The largest dedicated indoor pickleball venue in central Iowa.</p>
 
-<article class="grid xl:grid-cols-3 max-xl:grid-cols-1">
-    <figure class="borderl-2 border-dinks-green w-full h-full">
-
-    </figure>
-    <figure class="border-l-2 border-dinks-green w-full h-full">
-        <div class="flex flex-col text-center">
-            <span>3800 Merle Hay Rd Suite 1000</span>
-            <span>Des Moines, IA 50310</span>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a routerLink="/reserve"
+                    class="no-underline rounded-md px-3 py-3 text-medium font-medium bg-red-500 hover:bg-red-700 text-white hover:text-grey-200 visited:text-white hover:cursor-pointer">Reserve
+                    a count</a>
+                <a (click)="scrollToAbout()"
+                    class="text-sm font-semibold leading-6 text-white hover:text-gray-200 visited:text-white hover:cursor-pointer">Learn
+                    more
+                    <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="py-5 mt-10">
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 bg-white p-6 rounded-lg shadow-lg">
+                            <dt class="text-base leading-7 text-gray-600">13 dedicated pickleball courts</dt>
+                            <dt class="text-base leading-7 text-gray-600">Available for open play, leagues, tournaments,
+                                clinics, and more.</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                                Thirteen.
+                            </dd>
+                        </div>
+                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 bg-white p-6 rounded-lg shadow-lg">
+                            <dt class="text-base leading-7 text-gray-600">True outdoor court surfaces, permanent nets
+                            </dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                                Professional grade.</dd>
+                        </div>
+                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 bg-white p-6 rounded-lg shadow-lg">
+                            <dt class="text-base leading-7 text-gray-600">Forget about snow and rain!</dt>
+                            <dt class="text-base leading-7 text-gray-600">Open 6AM-midnight, 7 days/week </dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                                Open year round.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
         </div>
-        <div class="flex flex-col text-center">
-            <strong>Hours:</strong>
-            <span>6AM-midnight 7days/week</span>
-        </div>
-    </figure>
-    <figure class="border-l-2 border-dinks-green w-full h-full">
+    </div>
+</section>
 
-    </figure>
-</article>
+<div id="about" class="container mx-auto">
+    <article class="m-10 text-center">
+        <p>
+            We are a local, family owned, dedicated indoor pickleball venue. In fact, we are the largest dedicated
+            pickleball venueindoors or outdoors in central Iowa! Our facility is over 70,000 sq feet and will have 13
+            dedicated courts, dedicated practice/warm up areas and plenty of room to socialize with your friends before
+            and
+            after play.
+        </p>
+        <br>
+        <p>
+            We can't wait for you to join us whether that be for social, competitive or open play... or maybe a league,
+            tournament or fun event!
+        </p>
+        <br>
+        <p>
+            New to pickleball? No problem, we have professional instructors that will get you up to speed during our
+            Intro
+            to Pickleball clinics or help take your game to the next level!
+        </p>
+    </article>
+
+    <!-- <article class="grid xl:grid-cols-3 max-xl:grid-cols-1">
+        <figure class="borderl-2 border-dinks-green w-full h-full">
+
+        </figure>
+        <figure class="border-l-2 border-dinks-green w-full h-full">
+            <div class="flex flex-col text-center">
+                <span>3800 Merle Hay Rd Suite 1000</span>
+                <span>Des Moines, IA 50310</span>
+            </div>
+            <div class="flex flex-col text-center">
+                <strong>Hours:</strong>
+                <span>6AM-midnight 7days/week</span>
+            </div>
+        </figure>
+        <figure class="border-l-2 border-dinks-green w-full h-full">
+
+        </figure>
+    </article> -->
+    <div class="m-10 text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Have an idea or want to hear from us?</h2>
+        <p class="mt-4 text-lg leading-8 text-gray-300">Want to host an event? Interested in Sponsorship
+            Opportunities? Drop us a line at <a type="email-address"
+                href="mailto:dinkspicklebll&#64;gmail.com">dinkspickleballdsm&#64;gmail.com</a> or subscribe to our
+            newsletter!
+        </p>
+        <div class="mt-6 flex max-w-md gap-x-4 mx-auto justify-center">
+            <label for="email-address" class="sr-only">Email address</label>
+            <input id="email-address" name="email" type="email" autocomplete="email" required
+                class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                placeholder="Enter your email">
+            <button type="submit"
+                class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
+        </div>
+    </div>
+</div>
