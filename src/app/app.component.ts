@@ -1,17 +1,19 @@
+import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
 import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, RouterModule, RouterLinkActive],
+    imports: [CommonModule, RouterOutlet, RouterModule, RouterLinkActive],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
 export class AppComponent {
     title = 'dinks_pickleball_dsm'
-    menu = false
-    toggleMenu = () => {
-        this.menu = !this.menu
+    mobileMenuHidden = true
+
+    toggleMenu = (state?: boolean) => {
+        this.mobileMenuHidden = state ?? !this.mobileMenuHidden
     }
 }

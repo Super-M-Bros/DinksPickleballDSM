@@ -1,6 +1,6 @@
 <header class="fixed top-o w-full z-50">
-  <div #banner
-    class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+  <div #banner id="banner"
+    class="hidden md:flex relative isolate items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
     <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
       aria-hidden="true">
       <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
@@ -44,32 +44,24 @@
       </button>
     </div>
   </div>
-  <nav class="bg-gray-200">
+  <nav id="nav" class="bg-gray-200">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-20 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <button type="button"
             class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-controls="mobile-menu" aria-expanded="false">
+            aria-controls="mobile-menu" aria-expanded="false" (click)="toggleMenu()">
             <span class="absolute -inset-0.5"></span>
             <span class="sr-only">Open main menu</span>
-            <!--
-            Icon when menu is closed.
 
-            Menu open: "hidden", Menu closed: "block"
-          -->
-            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              aria-hidden="true">
+            <svg *ngIf="mobileMenuHidden" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-            <!--
-            Icon when menu is open.
 
-            Menu open: "block", Menu closed: "hidden"
-          -->
-            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              aria-hidden="true">
+            <svg *ngIf="!mobileMenuHidden" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -77,76 +69,72 @@
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
             <a routerLink="home" class="hover:cursor-pointer hover:opacity-90">
-              <img class="h-10 w-auto" src="logos/combinedIconHorizontal.png" alt="Your Company">
+              <img class="hidden sm:block h-10 w-auto" src="logos/combinedIconHorizontal.png" alt="Your Company">
+              <img class="sm:hidden h-10 w-auto" src="logos/logoIcon.png" alt="Your Company" (click)="toggleMenu(true)">
             </a>
-          </div>
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <!-- <a routerLink="home"
-                class="no-underline rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
-                routerLinkActive="bg-blue-700 active-link">Home</a>
-              <a routerLink="leagues-tournaments"
-                class="no-underline rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
-                routerLinkActive="bg-blue-700 active-link">Leagues/Tournaments</a>
-              <a routerLink="instruction"
-                class="no-underline rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
-                routerLinkActive="bg-blue-700 active-link">Instruction</a>
-              <a routerLink="about"
-                class="no-underline rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
-                routerLinkActive="bg-blue-700 active-link">About
-                Us</a> -->
-            </div>
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <div class="flex space-x-4">
-            <a routerLink="home"
-              class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900  hover:border-blue-900 hover:text-white visited:text-gray-900"
-              routerLinkActive="bg-blue-700 border-blue-700 active-link">Home</a>
-            <a routerLink="rates-memberships"
-              class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900  hover:border-blue-900 hover:text-white visited:text-gray-900"
-              routerLinkActive="bg-blue-700 border-blue-700 active-link">Rates</a>
-            <a routerLink="leagues-tournaments"
-              class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
-              routerLinkActive="bg-blue-700 border-blue-700 active-link">Leagues/Tournaments</a>
-            <a routerLink="instruction"
-              class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
-              routerLinkActive="bg-blue-700 border-blue-700 active-link">Instruction</a>
-            <a routerLink="about"
-              class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
-              routerLinkActive="bg-blue-700 border-blue-700 active-link">About
-              Us</a>
+          <div class="flex">
+            <div class="hidden sm:block space-x-2">
 
-            <!-- <div class="h-6 w-2px bg-gray-900"></div> -->
 
-            <a href="https://maps.app.goo.gl/pfU4YHvtoYF1QonE9" target="_blank"
-              class="no-underline rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-gray-500 visited:text-gray-900">
-              <i class="material-icons align-middle inline-block mr-1">place</i>
-              <!-- 3800 Merle Hay Rd Suite 1000 -->
-            </a>
+              <a routerLink="home"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900  hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">Home</a>
+              <a routerLink="rates-memberships"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900  hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">Rates</a>
+              <a routerLink="leagues-tournaments"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">Leagues/Tournaments</a>
+              <a routerLink="instruction"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">Instruction</a>
+              <a routerLink="about"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 text-gray-900 hover:bg-blue-900 hover:border-blue-900 hover:text-white visited:text-gray-900"
+                routerLinkActive="bg-blue-700 border-blue-700 active-link">About
+                Us</a>
 
-            <a routerLink="reserve"
-              class="no-underline rounded-md px-3 py-2 text-sm font-medium border-2 border-red-500 hover:border-red-700 text-red-500 hover:text-red-700 visited:text-red-700"
-              routerLinkActive=" border-red-700 bg-red-700 active-link">Reserve
-              a court</a>
+              <a href="https://maps.app.goo.gl/pfU4YHvtoYF1QonE9" target="_blank"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-gray-500 visited:text-gray-900">
+                <i class="material-icons align-middle inline-block mr-1">place</i>
+                <!-- 3800 Merle Hay Rd Suite 1000 -->
+              </a>
+
+              <a routerLink="reserve"
+                class="no-underline rounded-md px-3 py-2 text-sm font-medium text-red-500 border-2 border-red-500 hover:border-red-700 hover:text-red-700 visited:text-red-700"
+                routerLinkActive=" border-red-700 bg-red-700 active-link">Reserve
+                a court</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
+    <div #mobileMenu class="sm:hidden" id="mobile-menu" [hidden]="mobileMenuHidden" (click)="toggleMenu()">
       <div class="space-y-1 px-2 pb-3 pt-2">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-          aria-current="page">Dashboard</a>
-        <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-        <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-        <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+        <a routerLink="home"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-790000 active-link">Home</a>
+        <a routerLink="rates-memberships"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-900 active-link">Rates</a>
+        <a routerLink="leagues-tournaments"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-900 active-link">Leagues/Tournaments</a>
+        <a routerLink="instruction"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-900 active-link">Instruction</a>
+        <a routerLink="about"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-blue-900 hover:text-white visited:text-gray-900"
+          routerLinkActive="bg-blue-900 border-blue-900 active-link">About</a>
+        <a routerLink="reserve"
+          class="no-underline block rounded-md px-3 py-2 text-base font-medium text-red-500 border-2 border-red-500 hover:border-red-700 hover:text-red-700 visited:text-red-700"
+          routerLinkActive="border-red-700 bg-red-700 active-link">Reserve
+          a court</a>
       </div>
     </div>
   </nav>
