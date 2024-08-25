@@ -1,86 +1,92 @@
-<h1 class=" text-5xl text-center my-16 font-header">Leagues & Tournaments</h1>
+<h1 class=" text-5xl text-center font-header">Leagues & Tournaments</h1>
 
 <!-- Leagues -->
-<section class="mb-10">
-    <h2 class="text-4xl mb-5 max-xl:text-center font-header">Leagues</h2>
-    @for(l of leagues; track l){
+<div id="leagues" class="container mx-auto px-2 sm:px-6 lg:px-8">
+    <section class="mt-28 mb-10">
+        <h2 class="text-4xl mb-5 max-xl:text-center font-header">Leagues</h2>
+        @for(l of leagues; track l){
 
-    <figure class="flex flex-col rounded border-2 border-neutral-400 w-full p-10 shadow-xl">
-        <div class="flex justify-between mb-10">
-            <span>
-                <h3 class="text-2xl"><strong>{{l.name}}</strong></h3>
-                <div class="mt-1.5">{{l.dates}}</div>
-            </span>
-            @if(l.price?.amount){
-            <div class="rounded flex border border-green-600 text-green-600 p-1 px-5 max-lg:hidden">
-                <p class="text-5xl">${{l.price?.amount}}</p>
-                @if(l.price?.per){<p class="text-xl mt-6 ml-1">/{{l.price?.per}}</p>}
-            </div>
-            }
-        </div>
-
-        <ul class="xl:mb-5 max-xl:mb-10 ml-5 list-disc">
-            @for(d of l.details; track d){
-            <li>{{d}}</li>
-            }
-        </ul>
-
-
-        <div class="flex max-xl:flex-col max-xl:mb-5 justify-between">
-            <div class="self-center max-xl:mb-5"><strong>{{l.winnings}}</strong></div>
-            <div class="self-center w-full px-2 mb-5">
+        <figure class="flex flex-col rounded border-2 border-neutral-400 bg-slate-800 w-full p-10 shadow-xl">
+            <div class="flex justify-between mb-10">
+                <span>
+                    <h3 class="text-2xl"><strong>{{l.name}}</strong></h3>
+                    <div class="mt-1.5">{{l.dates}}</div>
+                </span>
                 @if(l.price?.amount){
-                <div class="rounded flex border border-green-600 text-green-600 py-1 justify-center w-full lg:hidden">
-                    <p class="text-3xl">${{l.price?.amount}}</p>
-                    @if(l.price?.per){<p class="text-lg mt-2 ml-1">/{{l.price?.per}}</p>}
+                <div class="rounded flex border border-green-600 text-green-600 p-1 px-5 max-lg:hidden">
+                    <p class="text-5xl">${{l.price?.amount}}</p>
+                    @if(l.price?.per){<p class="text-xl mt-6 ml-1">/{{l.price?.per}}</p>}
                 </div>
                 }
             </div>
-            <div class="flex flex-col">
-                <a class="rounded bg-dinks-red hover:bg-dinks-red-dark mb-1 p-2 text-center"
-                    [href]="l.registrationLink">
-                    Register
-                </a>
-                <p class="text-gray-400 text-sm text-center pr-2">*Must be a dinks member to participate</p>
+
+            <ul class="xl:mb-5 max-xl:mb-10 ml-5 list-disc">
+                @for(d of l.details; track d){
+                <li>{{d}}</li>
+                }
+            </ul>
+
+
+            <div class="flex max-xl:flex-col max-xl:mb-5 justify-between">
+                <div class="self-center max-xl:mb-5"><strong>{{l.winnings}}</strong></div>
+                <div class="self-center w-full px-2 mb-5">
+                    @if(l.price?.amount){
+                    <div
+                        class="rounded flex border border-green-600 text-green-600 py-1 justify-center w-full lg:hidden">
+                        <p class="text-3xl">${{l.price?.amount}}</p>
+                        @if(l.price?.per){<p class="text-lg mt-2 ml-1">/{{l.price?.per}}</p>}
+                    </div>
+                    }
+                </div>
+                <div class="flex flex-col">
+                    <a class="rounded bg-dinks-red hover:bg-dinks-red-dark mb-1 p-2 text-center"
+                        [href]="l.registrationLink">
+                        Register
+                    </a>
+                    <p class="text-gray-400 text-sm text-center pr-2">*Must be a dinks member to participate</p>
+                </div>
             </div>
-        </div>
-    </figure>
-    }
-</section>
+        </figure>
+        }
+    </section>
+</div>
+
 
 <!-- Tournaments -->
-<section>
-    <h2 class="text-4xl mb-5 max-xl:text-center font-header">Tournaments</h2>
-    <figure class="grid xl:grid-cols-3 max-xl:grid-cols-1 gap-5">
-        @for(t of tournaments; track t){
-        <div class="grid rounded border-2 content-between border-neutral-400 p-5 shadow-xl">
-            <div class="flex justify-between">
-                <span>
-                    <h3 class="text-2xl"><strong>{{t.name}}</strong></h3>
-                    <div class="mt-1.5">{{t.dates}}</div>
-                </span>
-            </div>
-
-            <div class="flex justify-start">
-                <p class="my-10">{{t.description}}</p>
-            </div>
-
-
-            <div class="flex justify-between">
-                @if(t.price?.amount){
-                <div class="rounded flex border border-green-600 text-green-600 py-1 px-3">
-                    <p class="text-2xl">${{t.price?.amount}}</p>
-                    @if(t.price?.per){<p class="mt-2 ml-1">/{{t.price?.per}}</p>}
+<div id="tournaments" class="container mx-auto px-2 sm:px-6 lg:px-8">
+    <section>
+        <h2 class="text-4xl mb-5 max-xl:text-center font-header">Tournaments</h2>
+        <figure class="grid xl:grid-cols-3 max-xl:grid-cols-1 gap-5">
+            @for(t of tournaments; track t){
+            <div class="grid rounded border-2 content-between border-neutral-400 bg-slate-800 p-5 shadow-xl">
+                <div class="flex justify-between">
+                    <span>
+                        <h3 class="text-2xl"><strong>{{t.name}}</strong></h3>
+                        <div class="mt-1.5">{{t.dates}}</div>
+                    </span>
                 </div>
-                } @else {<div></div>}
-                @if(t.registrationLink){
-                <a class="rounded bg-dinks-red hover:bg-dinks-red-dark px-10 self-center p-2"
-                    [href]="t.registrationLink">
-                    Register
-                </a>
-                }
+
+                <div class="flex justify-start">
+                    <p class="my-10">{{t.description}}</p>
+                </div>
+
+
+                <div class="flex justify-between">
+                    @if(t.price?.amount){
+                    <div class="rounded flex border border-green-600 text-green-600 py-1 px-3">
+                        <p class="text-2xl">${{t.price?.amount}}</p>
+                        @if(t.price?.per){<p class="mt-2 ml-1">/{{t.price?.per}}</p>}
+                    </div>
+                    } @else {<div></div>}
+                    @if(t.registrationLink){
+                    <a class="rounded bg-dinks-red hover:bg-dinks-red-dark px-10 self-center p-2"
+                        [href]="t.registrationLink">
+                        Register
+                    </a>
+                    }
+                </div>
             </div>
-        </div>
-        }
-    </figure>
-</section>
+            }
+        </figure>
+    </section>
+</div>
