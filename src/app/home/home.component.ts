@@ -10,9 +10,9 @@ import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  scrollToAbout() {
+  scrollTo(element: string) {
     // scroll to the element named arg0
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(element)?.scrollIntoView({ behavior: 'smooth' });
   }
 
 }

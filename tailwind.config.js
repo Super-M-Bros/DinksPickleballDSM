@@ -11,6 +11,10 @@ module.exports = {
                 'dinks-red': '#c01422',
                 'dinks-red-dark': '#760e16',
                 'dinks-green': '#225534',
+                'maddie-green': 'rgba(9, 136, 67, 1)',
+                'maddie-slate': 'rgba(43, 39, 57, 1)',
+                'maddie-red': 'rgba(237, 32, 36, 1)',
+                'maddie-cream': 'rgba(254, 252, 236, 1)',
                 'smoked-background': 'rgba(0, 0, 0, 0.5)',
             },
             textShadow: {
@@ -36,7 +40,7 @@ module.exports = {
                     textShadow: 'none',
                 },
                 '.text-shadow-lg-green': {
-                    textShadow: '3px 3px 0 rgba(9, 136, 67, 1)',
+                    textShadow: '3px 3px 0 rgba(9, 136, 67, 1)', // maddie-green
                 },
             }
 

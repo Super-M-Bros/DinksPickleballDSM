@@ -16,4 +16,9 @@ export class AppComponent {
     toggleMenu = (state?: boolean) => {
         this.mobileMenuHidden = state ?? !this.mobileMenuHidden
     }
+
+    scrollTo(element: string) {
+        // scroll to the element named arg0
+        document.getElementById(element)?.scrollIntoView({ behavior: 'smooth' });
+    }
 }
