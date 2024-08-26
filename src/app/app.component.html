@@ -44,6 +44,7 @@
       </button>
     </div>
   </div>
+
   <nav id="nav" class="bg-gray-200">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-20 items-center justify-between">
@@ -79,7 +80,7 @@
         </div>
 
         <!-- Desktop Nav -->
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
           <div class="flex">
             <div class="hidden lg:block space-x-2">
               <a routerLink="home"
@@ -113,8 +114,16 @@
                 routerLinkActive="border-red-700 bg-red-700 active-link" onclick="window.scrollTo({ top: 0 })">Reserve
                 a court</a>
             </div>
+
+            <div class="lg:hidden">
+              <a href="http://maps.apple.com/?daddr=3800+Merle+Hay+Rd+Suite+1000,+Des+Moines+IA+50310" target="_blank"
+                class="no-underline text-maddie-slate hover:text-slate-700">
+                <i class="material-icons align-middle inline-block">place</i>
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
 
