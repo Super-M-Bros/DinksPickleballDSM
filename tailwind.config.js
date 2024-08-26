@@ -39,8 +39,14 @@ module.exports = {
                 '.text-shadow-none': {
                     textShadow: 'none',
                 },
-                '.text-shadow-lg-green': {
+                '.text-shadow-md-green': {
                     textShadow: '3px 3px 0 rgba(9, 136, 67, 1)', // maddie-green
+                },
+                '.text-shadow-lg-green': {
+                    textShadow: '4px 4px 0 rgba(9, 136, 67, 1)', // maddie-green
+                },
+                '.text-shadow-xl-green': {
+                    textShadow: '5px 5px 0 rgba(9, 136, 67, 1)', // maddie-green
                 },
             }
 
