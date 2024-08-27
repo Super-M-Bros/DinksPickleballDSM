@@ -4,6 +4,7 @@ module.exports = {
     theme: {
         fontFamily: {
             header: ['Bebas Neue', 'sans-serif'],
+            futura: ['futura-pt', 'sans-serif'],
         },
         extend: {
             colors: {
@@ -21,7 +22,8 @@ module.exports = {
                 'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
                 'md': '3px 3px 6px rgba(0, 0, 0, 0.5)',
                 'lg': '4px 4px 8px rgba(0, 0, 0, 0.5)',
-            }
+                'xl': '5px 5px 10px rgba(0, 0, 0, 0.5)',
+            },
         },
     },
     plugins: [
@@ -47,6 +49,9 @@ module.exports = {
                 },
                 '.text-shadow-xl-green': {
                     textShadow: '5px 5px 0 rgba(9, 136, 67, 1)', // maddie-green
+                },
+                '.border-b-3': {
+                    borderBottomWidth: '3px',
                 },
             }
 

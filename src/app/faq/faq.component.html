@@ -1,6 +1,6 @@
-<h1 class=" text-5xl text-center my-16 font-header">Frequently Asked Questions</h1>
+<h1 class="my-16 text-5xl text-center  font-header">Frequently Asked Questions</h1>
 <article class="xl:mx-72">
-    <p class="text-center mb-10">
+    <p class="mb-10 text-center">
         Please reach us at
         <a href="mailto:info@dinkspickleballdsm.com">{{
             'info@dinkspickleballdsm.com'
@@ -9,7 +9,7 @@
     </p>
 
     @for(faq of faqs; track faq; let i = $index){
-    <section class="p-4 border-t last:border-b last:mb-5 border-white hover:cursor-pointer" (click)="toggleShown(i)">
+    <section class="p-4 border-t border-white last:border-b last:mb-5 hover:cursor-pointer" (click)="toggleShown(i)">
         <div class="flex justify-between">
             <strong class="p-2"> {{faq.question}} </strong>
             <button class="ml-5" [class.rotate-180]="shown.includes(i)">

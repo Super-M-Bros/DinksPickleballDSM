@@ -1,51 +1,51 @@
 <main>
-    <h1 class=" text-5xl text-center my-16 font-header">Become a sponsor!</h1>
-    <p class="mx-24 my-16 px-48 text-center text-lg">
+    <h1 class="my-16 text-5xl text-center  font-header">Become a sponsor!</h1>
+    <p class="px-48 mx-24 my-16 text-lg text-center">
         We have a variety of sponsorship opportunities that help us deliver on our mission to the pickleball community
         while at the same time providing you an opportunity to connect your business with the broader community.
     </p>
     <article class="grid grid-cols-3 gap-12 h-96">
-        <figure class="rounded bg-gray-800 h-full w-full">
+        <figure class="w-full h-full bg-gray-800 rounded">
             <div class="relative rounded bg-amber-300 h-full w-full -translate-x-1.5 translate-y-1.5 z-[-1]">
             </div>
             <div class="flex flex-col py-8 -translate-y-full shadow-xl">
-                <div class="text-center mb-5">
+                <div class="mb-5 text-center">
                     <strong class="text-3xl">Dinks Gold Sponsor</strong>
                 </div>
-                <ul class="list-disc mx-12 mb-36">
+                <ul class="mx-12 list-disc mb-36">
                     <li>1 VIP tier annual membership</li>
                     <li>Banner hung in facility for 1 year</li>
                     <li>Logo on website for 1 year</li>
                     <li>1 VIP tier annual membership</li>
                 </ul>
-                <p class="text-4xl text-amber-300 text-center">
+                <p class="text-4xl text-center text-amber-300">
                     $1000/year
                 </p>
             </div>
         </figure>
-        <figure class="rounded bg-gray-800 h-full w-full">
+        <figure class="w-full h-full bg-gray-800 rounded">
             <div class="relative rounded bg-sky-500 h-full w-full -translate-x-1.5 translate-y-1.5 z-[-1]"></div>
             <div class="flex flex-col py-8 -translate-y-full shadow-xl">
-                <div class="text-center mb-5">
+                <div class="mb-5 text-center">
                     <strong class="text-3xl">Premier Entry Sponsor</strong>
                 </div>
-                <ul class="list-disc mx-12 mb-24">
+                <ul class="mx-12 mb-24 list-disc">
                     <li>1 VIP tier annual membership</li>
                     <li>Premier 4'x30' advertisement space near entrance and courts</li>
                     <li>Mesh windscreen printing sponsor responsibility</li>
                     <li>Logo on website for 1 year</li>
                     <li>1 VIP tier annual membership</li>
                 </ul>
-                <p class="text-4xl text-sky-500 text-center">$2500/year</p>
+                <p class="text-4xl text-center text-sky-500">$2500/year</p>
             </div>
         </figure>
-        <figure class="rounded bg-gray-800 h-full w-full">
+        <figure class="w-full h-full bg-gray-800 rounded">
             <div class="relative rounded bg-violet-600 h-full w-full -translate-x-1.5 translate-y-1.5  z-[-1]"></div>
-            <div class="rounded flex flex-col py-8 -translate-y-full shadow-xl">
-                <div class="text-center mb-5">
+            <div class="flex flex-col py-8 -translate-y-full rounded shadow-xl">
+                <div class="mb-5 text-center">
                     <strong class="text-3xl">"The Big Dill" Court Sponsor</strong>
                 </div>
-                <ul class="list-disc mx-12 mb-12">
+                <ul class="mx-12 mb-12 list-disc">
                     <li>2 VIP tier annual membership</li>
                     <li>Court naming rights (seen every time courts are booked) ex. ABC Corp - Court 1</li>
                     <li>On court branding - banner, net logo & more (sponsor responsibility)</li>
@@ -53,16 +53,16 @@
                     <li>Logo on website for 1 year</li>
                     <li>1 VIP tier annual membership</li>
                 </ul>
-                <p class="text-4xl text-violet-600 text-center">$5000/year</p>
+                <p class="text-4xl text-center text-violet-600">$5000/year</p>
             </div>
         </figure>
     </article>
 
     <article>
-        <h1 class="text-5xl text-center mb-16 mt-28">Our current sponsors</h1>
+        <h1 class="mb-16 text-5xl text-center mt-28">Our current sponsors</h1>
         <section class="grid grid-cols-3 gap-12 bg-white ">
             @for(logo of sponsorLogos; track logo){
-            <img class="p-5 h-48" [src]="logo" [alt]="logo">
+            <img class="h-48 p-5" [src]="logo" [alt]="logo">
             }
         </section>
     </article>
