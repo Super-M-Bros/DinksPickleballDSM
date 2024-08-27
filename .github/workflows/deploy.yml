@@ -3,7 +3,7 @@ name: Deploy to S3
 on:
   push:
     branches:
-      - main  # Change this to your default branch if it's not 'main'
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Specify the Node.js version you are using
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
@@ -28,7 +28,7 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'us-east-2'  # Change to your AWS region
-          S3_BUCKET: 'cdkstack-mybucketf68f3ff0-jsfimejvtgrj'  # Change to your S3 bucket name
+          AWS_REGION: 'us-east-2'
+          S3_BUCKET: 'cdkstack-mybucketf68f3ff0-jsfimejvtgrj'
         run: |
           aws s3 sync ./dist/dinks_pickleball_dsm/browser/ s3://$S3_BUCKET --delete
