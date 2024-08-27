@@ -11,8 +11,17 @@ import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
 })
 export class HomeComponent {
   scrollTo(element: string) {
-    // scroll to the element named arg0
-    document.getElementById(element)?.scrollIntoView({ behavior: 'smooth' });
+    // Get the height of the header
+    const navHeight = document.querySelector('header')?.clientHeight;
+
+    // Get the element to scroll to
+    const elementToScroll = document.getElementById(element);
+
+    if (elementToScroll && navHeight) {
+      // Get the top position of the element to scroll to, minus the height of the header, minus the margin of the element
+      const scrollPosition = elementToScroll.offsetTop - navHeight - parseInt(getComputedStyle(elementToScroll).marginTop);
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    }
   }
 
 }

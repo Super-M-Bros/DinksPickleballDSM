@@ -4,7 +4,7 @@
     <div class="relative z-10 flex items-center justify-center h-full">
         <div class="text-center text-white">
             <h1
-                class="inline-block mx-16 mb-10 text-4xl font-medium md:text-7xl sm:mt-20 sm:mx-8 border-b-3 border-b-maddie-green font-futura">
+                class="inline-block mx-16 mb-10 text-4xl font-medium underline md:text-7xl sm:mt-20 sm:mx-8 font-futura decoration-maddie-green decoration-3 underline-offset-4 md:underline-offset-8">
                 The best place to play in DSM</h1>
 
             <div class="items-center justify-center hidden mb-10 md:flex md:mx-10 lg:mx-40">
@@ -29,20 +29,20 @@
             </p>
 
             <div class="mt-6">
-                <a routerLink="/reserve"
-                    class="px-3 py-1 text-3xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-grey-200 visited:text-white hover:cursor-pointer font-futura">JOIN
+                <a class="px-3 py-1 text-3xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer font-futura"
+                    (click)="scrollTo('memberships')">JOIN
                     TODAY</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="memberships" class="container pb-20 mx-auto mt-16 text-center border-b-2 border-b-gray-300">
+<section id="court-rates" class="container pb-20 mx-auto mt-16 text-center border-b-2 border-b-gray-300">
     <h1 class="inline-block mx-16 text-4xl font-medium md:text-6xl sm:mx-8 font-futura">
         Member Court Rates</h1>
 
     <article class="flex justify-center mt-12">
-        <dl class="grid grid-cols-1 text-center gap-x-8 gap-y-16 md:grid-cols-3">
+        <dl class="grid grid-cols-1 text-center gap-x-8 gap-y-6 md:grid-cols-3">
             <div class="p-2 text-black border-2 border-maddie-green rounded-xl font-futura">
                 <div class="flex flex-col max-w-xs p-4 mx-auto rounded-lg shadow-lg gap-y-4 bg-maddie-cream">
                     <dt class="text-base leading-5"><span class="text-4xl">weekdays</span><br><span class="text-lg">6 am
@@ -50,7 +50,7 @@
                             4
                             pm</span></dt>
                     <dt class="mt-5 text-base leading-5"><a routerLink="/reserve"
-                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-grey-200 visited:text-white hover:cursor-pointer">BOOK
+                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer">BOOK
                             NOW</a>
                     </dt>
                     <dd class="order-first">
@@ -66,7 +66,7 @@
                             12
                             am</span></dt>
                     <dt class="mt-5 text-base leading-5"><a routerLink="/reserve"
-                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-grey-200 visited:text-white hover:cursor-pointer">BOOK
+                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer">BOOK
                             NOW</a>
                     </dt>
                     <dd class="order-first">
@@ -82,7 +82,7 @@
                             12
                             am</span></dt>
                     <dt class="mt-5 text-base leading-5"><a routerLink="/reserve"
-                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-grey-200 visited:text-white hover:cursor-pointer">BOOK
+                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer">BOOK
                             NOW</a>
                     </dt>
                     <dd class="order-first">
@@ -121,38 +121,47 @@
                 <!-- Limited -->
                 <tr class="border-b-2 border-maddie-green">
                     <td class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"><span
-                            class="text-4xl">Limited</span><br><span class="text-xl">$45
+                            class="text-3xl md:text-4xl">Limited</span><br><span class="text-lg md:text-xl">$45
                             per year</span></td>
-                    <td class="p-3 text-xl md:p-4 lg:p-5">5<br>days</td>
-                    <td class="p-3 text-xl md:p-4 lg:p-5">$9</td>
-                    <td class="p-3 text-xl md:p-4 lg:p-5"></td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">5<br>days</td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">$9</td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5"></td>
                 </tr>
                 <!-- Standard -->
                 <tr class="border-b-2 border-maddie-green">
                     <td class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"><span
-                            class="text-4xl">Standard</span><br><span class="text-xl">$145 per year</span></td>
-                    <td class="p-3 text-xl md:p-4 lg:p-5">2<br>weeks</td>
-                    <td class="p-3 text-xl md:p-4 lg:p-5">$8</td>
-                    <td class="flex items-center justify-center p-3 text-xl md:p-4 lg:p-5"><img class="w-20"
+                            class="text-3xl md:text-4xl">Standard</span><br><span class="text-lg md:text-xl">$145 per
+                            year</span></td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">2<br>weeks</td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">$8</td>
+                    <td class="flex items-center justify-center p-3 text-lg md:text-xl md:p-4 lg:p-5"><img class="w-20"
                             src="pickleball_icon.png" />
                 </tr>
                 <!-- VIP -->
                 <tr class="border-b-2 border-maddie-green">
                     <td class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"><span
-                            class="text-4xl">VIP</span><br><span class="text-xl">$195
+                            class="text-3xl md:text-4xl">VIP</span><br><span class="text-lg md:text-xl">$195
                             per year</span></td>
-                    <td class="p-3 text-xl md:p-4 lg:p-5">6<br>months</td>
-                    <td class="p-3 text-xl md:p-4 lg:p-5">$7</td>
-                    <td class="flex items-center justify-center p-3 text-xl md:p-4 lg:p-5"><img class="w-20"
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">6<br>months</td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">$7</td>
+                    <td class="flex items-center justify-center p-3 text-lg md:text-xl md:p-4 lg:p-5"><img class="w-20"
                             src="pickleball_icon.png" />
                     </td>
                 </tr>
                 <tr>
                     <td class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"></td>
-                    <td class="p-3 text-xl md:p-4 lg:p-5" colspan="3">* all memberships come with personalized door code
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5" colspan="3">* all memberships come with
+                        personalized door code
                         access
                     </td>
                 </tr>
+                <!-- <tr class="md:hidden">
+                    <td class="p-3 text-lg text-center md:text-xl md:p-4 lg:p-5" colspan="4">
+                        <div class="text-center">
+                            * all memberships come with personalized door code access
+                        </div>
+                    </td>
+                </tr> -->
             </tbody>
         </table>
 
@@ -161,12 +170,8 @@
 
     <div class="mt-10">
         <a routerLink="/reserve"
-            class="px-3 py-1 text-3xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-grey-200 visited:text-white hover:cursor-pointer font-futura">SIGN
+            class="px-3 py-1 text-3xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer font-futura">SIGN
             UP</a>
-        <!-- <a (click)="scrollToAbout()"
-                        class="text-sm font-semibold leading-6 text-white hover:text-gray-200 visited:text-white hover:cursor-pointer">Learn
-                        more
-                        <span aria-hidden="true">→</span></a> -->
     </div>
 </section>
 
@@ -228,24 +233,6 @@
         </p>
     </article>
 
-    <!-- <article class="grid xl:grid-cols-3 max-xl:grid-cols-1">
-        <figure class="w-full h-full borderl-2 border-dinks-green">
-
-        </figure>
-        <figure class="w-full h-full border-l-2 border-dinks-green">
-            <div class="flex flex-col text-center">
-                <span>3800 Merle Hay Rd Suite 1000</span>
-                <span>Des Moines, IA 50310</span>
-            </div>
-            <div class="flex flex-col text-center">
-                <strong>Hours:</strong>
-                <span>6AM-midnight 7days/week</span>
-            </div>
-        </figure>
-        <figure class="w-full h-full border-l-2 border-dinks-green">
-
-        </figure>
-    </article> -->
     <div class="m-10 text-center">
         <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Have an idea or want to hear from us?
         </h2>
