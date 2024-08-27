@@ -1,0 +1,30 @@
+// h1,
+// h2,
+// span,
+// p,
+// a {
+//     // color: var(--tw-color-black);
+//     // // font-family: 'futura-pt', sans-serif;
+//     // font-weight: 400;
+//     // font-style: normal;
+// }
+
+// h1 {
+//     font-weight: 500;
+// }
+
+th,
+td {
+    color: white;
+    text-align: center;
+    // padding: 1.25rem;
+
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+tr td:first-child,
+tr th:first-child {
+    text-align: right;
+}

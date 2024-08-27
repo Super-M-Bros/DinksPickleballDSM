@@ -1,98 +1,201 @@
-<section class="relative bg-cover bg-center h-screen" style="background-image: url('facility.jpg');">
+<section class="relative h-screen bg-center bg-cover border-b-2 border-b-gray-300"
+    style="background-image: url('facility.jpg');">
     <div class="absolute inset-0 bg-black opacity-75"></div>
     <div class="relative z-10 flex items-center justify-center h-full">
         <div class="text-center text-white">
-            <h1 class="inline-block text-4xl md:text-7xl mb-10 sm:mt-20 mx-16 sm:mx-8"
-                style="font-family: 'futura-pt', sans-serif; font-weight: 500; font-style: normal; border-bottom-width: 3px; border-bottom-color: rgb(9, 136, 67);">
+            <h1
+                class="inline-block mx-16 mb-10 text-4xl font-medium underline md:text-7xl sm:mt-20 sm:mx-8 font-futura decoration-maddie-green decoration-3 underline-offset-4 md:underline-offset-8">
                 The best place to play in DSM</h1>
 
-            <div class="hidden md:flex justify-center items-center md:mx-10 lg:mx-40 mb-10">
-                <span class="mr-2 text-right"
-                    style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal; font-size: 12rem; line-height: 1;">13</span>
-                <p class="text-lg md:text-5xl text-left ml-2"
-                    style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal; line-height: 1.4 !important;">
+            <div class="items-center justify-center hidden mb-10 md:flex md:mx-10 lg:mx-40">
+                <span class="mr-2 leading-none text-right text-shadow-lg-green font-futura"
+                    style="font-size: 12rem;">13</span>
+                <p class="ml-2 text-lg text-left md:text-5xl font-futura" style="line-height: 1.4 !important;">
                     professional grade courts<br>open all year round
                 </p>
             </div>
 
-            <div class="md:hidden block text-center mb-10">
-                <p class="text-9xl" style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal;">
-                    <span class="text-shadow-lg-green">13</span>
+            <div class="block mb-10 text-center md:hidden">
+                <p class="text-9xl font-futura">
+                    <span class="text-shadow-md-green">13</span>
                 </p>
-                <p class="text-2xl"
-                    style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal; line-height: 1.4 !important;">
+                <p class="text-2xl font-futura" style="line-height: 1.4 !important;">
                     professional grade courts<br>open all year round
                 </p>
             </div>
 
-            <p class="text-lg md:text-2xl"
-                style="font-family: 'futura-pt', sans-serif; font-weight: 400; font-style: normal; line-height: 1.4 !important;">
+            <p class="text-lg md:text-2xl font-futura" style="line-height: 1.4 !important;">
                 6 am - 12 am | 7 days a week
             </p>
 
             <div class="mt-6">
-                <a routerLink="/reserve"
-                    class="no-underline rounded-md px-3 py-1 text-3xl bg-red-500 hover:bg-red-700 text-white hover:text-grey-200 visited:text-white hover:cursor-pointer"
-                    style="font-family: 'futura-pt', sans-serif; font-weight: 500; font-style: normal">JOIN TODAY</a>
-                <!-- <a (click)="scrollToAbout()"
-                    class="text-sm font-semibold leading-6 text-white hover:text-gray-200 visited:text-white hover:cursor-pointer">Learn
-                    more
-                    <span aria-hidden="true">→</span></a> -->
+                <a class="px-3 py-1 text-3xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer font-futura"
+                    (click)="scrollTo('memberships')">JOIN
+                    TODAY</a>
             </div>
-
-            <!-- <h1 class="text-4xl md:text-7xl font-bold mb-4 mt-28">13</h1>
-            <p class="text-lg md:text-2xl mb-8">Dedicated professional grade pickle courts, open all year round.</p> -->
-            <!-- <div class="py-5 mt-14">
-                <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                    <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 bg-gray-200 p-6 rounded-lg shadow-lg">
-                            <dt class="text-base leading-5 text-gray-600">13 dedicated pickleball courts.</dt>
-                            <dt class="text-base leading-5 text-gray-600">Available for open play, leagues, tournaments,
-                                clinics, and more!</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
-                                Thirteen.
-                            </dd>
-                        </div>
-                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 bg-gray-200 p-6 rounded-lg shadow-lg">
-                            <dt class="text-base leading-5 text-gray-600">True outdoor court surfaces, permanent nets.
-                            </dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
-                                Professional grade.</dd>
-                        </div>
-                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 bg-gray-200 p-6 rounded-lg shadow-lg">
-                            <dt class="text-base leading-5 text-gray-600">Forget about snow and rain!</dt>
-                            <dt class="text-base leading-5 text-gray-600">Open 6AM-midnight, 7 days/week.</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
-                                Open all year round.</dd>
-                        </div>
-                    </dl>
-                </div>
-            </div> -->
         </div>
     </div>
 </section>
 
+<section id="court-rates" class="container pb-20 mx-auto mt-16 text-center border-b-2 border-b-gray-300">
+    <h1 class="inline-block mx-16 text-4xl font-medium md:text-6xl sm:mx-8 font-futura">
+        Member Court Rates</h1>
+
+    <article class="flex justify-center mt-12">
+        <dl class="grid grid-cols-1 text-center gap-x-8 gap-y-6 md:grid-cols-3">
+            <div class="p-2 text-black border-2 border-maddie-green rounded-xl font-futura">
+                <div class="flex flex-col max-w-xs p-4 mx-auto rounded-lg shadow-lg gap-y-4 bg-maddie-cream">
+                    <dt class="text-base leading-5"><span class="text-4xl">weekdays</span><br><span class="text-lg">6 am
+                            -
+                            4
+                            pm</span></dt>
+                    <dt class="mt-5 text-base leading-5"><a routerLink="/reserve"
+                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer">BOOK
+                            NOW</a>
+                    </dt>
+                    <dd class="order-first">
+                        <span class="text-3xl align-top">$</span><span class="text-8xl">16</span><span
+                            class="text-4xl">/hr</span>
+                    </dd>
+                </div>
+            </div>
+            <div class="p-2 text-black border-2 border-maddie-green rounded-xl font-futura">
+                <div class="flex flex-col max-w-xs p-4 mx-auto rounded-lg shadow-lg gap-y-4 bg-maddie-cream">
+                    <dt class="text-base leading-5"><span class="text-4xl">weekdays</span><br><span class="text-lg">4 pm
+                            -
+                            12
+                            am</span></dt>
+                    <dt class="mt-5 text-base leading-5"><a routerLink="/reserve"
+                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer">BOOK
+                            NOW</a>
+                    </dt>
+                    <dd class="order-first">
+                        <span class="text-3xl align-top">$</span><span class="text-8xl">22</span><span
+                            class="text-4xl">/hr</span>
+                    </dd>
+                </div>
+            </div>
+            <div class="p-2 text-black border-2 border-maddie-green rounded-xl font-futura">
+                <div class="flex flex-col max-w-md p-4 mx-auto rounded-lg shadow-lg gap-y-4 bg-maddie-cream">
+                    <dt class="text-base leading-5"><span class="text-4xl">weekends</span><br><span class="text-lg">6 am
+                            -
+                            12
+                            am</span></dt>
+                    <dt class="mt-5 text-base leading-5"><a routerLink="/reserve"
+                            class="px-3 py-1 text-xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer">BOOK
+                            NOW</a>
+                    </dt>
+                    <dd class="order-first">
+                        <span class="text-3xl align-top">$</span><span class="text-8xl">28</span><span
+                            class="text-4xl">/hr</span>
+                    </dd>
+                </div>
+            </div>
+        </dl>
+    </article>
+    <article class="mt-8">
+        <div class="text-2xl font-futura">
+            *membership required to book courts
+        </div>
+    </article>
+</section>
+
+<!-- Memberships -->
+<section id="memberships"
+    class="container px-2 pb-20 mx-auto mt-16 text-center border-b-2 sm:px-6 lg:px-8 border-b-gray-300">
+    <h1 class="inline-block mx-16 text-4xl font-medium md:text-6xl sm:mx-8 font-futura">
+        Become a Member</h1>
+
+    <article class="flex justify-center mt-12">
+        <table class="mx-8 lg:mx-0">
+            <!-- Headers -->
+            <thead class="border-b-2 border-maddie-green">
+                <tr>
+                    <th class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"></th>
+                    <th class="p-3 text-xl md:p-4 lg:p-5">book in advance</th>
+                    <th class="p-3 text-xl md:p-4 lg:p-5">open play rates</th>
+                    <th class="p-3 text-xl md:p-4 lg:p-5">early event access</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Limited -->
+                <tr class="border-b-2 border-maddie-green">
+                    <td class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"><span
+                            class="text-3xl md:text-4xl">Limited</span><br><span class="text-lg md:text-xl">$45
+                            per year</span></td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">5<br>days</td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">$9</td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5"></td>
+                </tr>
+                <!-- Standard -->
+                <tr class="border-b-2 border-maddie-green">
+                    <td class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"><span
+                            class="text-3xl md:text-4xl">Standard</span><br><span class="text-lg md:text-xl">$145 per
+                            year</span></td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">2<br>weeks</td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">$8</td>
+                    <td class="flex items-center justify-center p-3 text-lg md:text-xl md:p-4 lg:p-5"><img class="w-20"
+                            src="pickleball_icon.png" />
+                </tr>
+                <!-- VIP -->
+                <tr class="border-b-2 border-maddie-green">
+                    <td class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"><span
+                            class="text-3xl md:text-4xl">VIP</span><br><span class="text-lg md:text-xl">$195
+                            per year</span></td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">6<br>months</td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5">$7</td>
+                    <td class="flex items-center justify-center p-3 text-lg md:text-xl md:p-4 lg:p-5"><img class="w-20"
+                            src="pickleball_icon.png" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p-3 border-r-4 md:p-4 lg:p-5 border-maddie-green"></td>
+                    <td class="p-3 text-lg md:text-xl md:p-4 lg:p-5" colspan="3">* all memberships come with
+                        personalized door code
+                        access
+                    </td>
+                </tr>
+                <!-- <tr class="md:hidden">
+                    <td class="p-3 text-lg text-center md:text-xl md:p-4 lg:p-5" colspan="4">
+                        <div class="text-center">
+                            * all memberships come with personalized door code access
+                        </div>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+
+
+    </article>
+
+    <div class="mt-10">
+        <a routerLink="/reserve"
+            class="px-3 py-1 text-3xl font-medium text-white no-underline rounded-md bg-maddie-red hover:bg-red-700 hover:text-white visited:text-white hover:cursor-pointer font-futura">SIGN
+            UP</a>
+    </div>
+</section>
+
 <!-- <div id="testimonial" class="container mx-auto">
-    <section class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <section class="relative px-6 py-24 overflow-hidden bg-white isolate sm:py-32 lg:px-8">
         <div
             class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20">
         </div>
         <div
             class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center">
         </div>
-        <div class="mx-auto max-w-2xl lg:max-w-4xl">
-            <img class="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="">
+        <div class="max-w-2xl mx-auto lg:max-w-4xl">
+            <img class="h-12 mx-auto" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="">
             <figure class="mt-10">
-                <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                <blockquote class="text-xl font-semibold leading-8 text-center text-gray-900 sm:text-2xl sm:leading-9">
                     <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente
                         alias
                         molestiae. Numquam corrupti in laborum sed rerum et corporis.”</p>
                 </blockquote>
                 <figcaption class="mt-10">
-                    <img class="mx-auto h-10 w-10 rounded-full"
+                    <img class="w-10 h-10 mx-auto rounded-full"
                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt="">
-                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div class="flex items-center justify-center mt-4 space-x-3 text-base">
                         <div class="font-semibold text-gray-900">Judith Black</div>
                         <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
                             <circle cx="1" cy="1" r="1" />
@@ -109,14 +212,17 @@
     <article class="m-10 text-center">
         <p>
             We are a local, family owned, dedicated indoor pickleball venue. In fact, we are the largest dedicated
-            pickleball venueindoors or outdoors in central Iowa! Our facility is over 70,000 sq feet and will have 13
-            dedicated courts, dedicated practice/warm up areas and plenty of room to socialize with your friends before
+            pickleball venueindoors or outdoors in central Iowa! Our facility is over 70,000 sq feet and will have
+            13
+            dedicated courts, dedicated practice/warm up areas and plenty of room to socialize with your friends
+            before
             and
             after play.
         </p>
         <br>
         <p>
-            We can't wait for you to join us whether that be for social, competitive or open play... or maybe a league,
+            We can't wait for you to join us whether that be for social, competitive or open play... or maybe a
+            league,
             tournament or fun event!
         </p>
         <br>
@@ -127,32 +233,15 @@
         </p>
     </article>
 
-    <!-- <article class="grid xl:grid-cols-3 max-xl:grid-cols-1">
-        <figure class="borderl-2 border-dinks-green w-full h-full">
-
-        </figure>
-        <figure class="border-l-2 border-dinks-green w-full h-full">
-            <div class="flex flex-col text-center">
-                <span>3800 Merle Hay Rd Suite 1000</span>
-                <span>Des Moines, IA 50310</span>
-            </div>
-            <div class="flex flex-col text-center">
-                <strong>Hours:</strong>
-                <span>6AM-midnight 7days/week</span>
-            </div>
-        </figure>
-        <figure class="border-l-2 border-dinks-green w-full h-full">
-
-        </figure>
-    </article> -->
     <div class="m-10 text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Have an idea or want to hear from us?</h2>
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Have an idea or want to hear from us?
+        </h2>
         <p class="mt-4 text-lg leading-8 text-gray-300">Want to host an event? Interested in Sponsorship
             Opportunities? Drop us a line at <a type="email-address"
                 href="mailto:dinkspicklebll&#64;gmail.com">dinkspickleballdsm&#64;gmail.com</a> or subscribe to our
             newsletter!
         </p>
-        <div class="mt-6 flex max-w-md gap-x-4 mx-auto justify-center">
+        <div class="flex justify-center max-w-md mx-auto mt-6 gap-x-4">
             <label for="email-address" class="sr-only">Email address</label>
             <input id="email-address" name="email" type="email" autocomplete="email" required
                 class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
